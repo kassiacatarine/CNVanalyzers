@@ -1,0 +1,59 @@
+% ##### define colors
+\definecolor{color000000}{RGB}{0,0,0}
+% ##### FIM define colors
+
+% ######## init table ########
+\begin{table}[h]
+ \centering
+% distancia entre a linha e o texto
+ {\renewcommand\arraystretch{1.25}
+ \caption{Ferramentas de detecção de CNVs usando a abordagem de profundidade em leitura\label{qua:ferramentas-de-deteccao-de-cnv}}
+ \begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{ l l l l l }
+  \cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}  
+    \multicolumn{1}{|c|}{\textbf{\textcolor{color000000}{Ferramenta}}} &
+    \multicolumn{1}{c|}{\textbf{\textcolor{color000000}{Versão}}} &
+    \multicolumn{1}{c|}{\textbf{\textcolor{color000000}{Linguagem}}} &
+    \multicolumn{1}{c|}{\textbf{\textcolor{color000000}{Método}}} &
+    \multicolumn{1}{c|}{\textbf{Referência}}
+  \\  
+  \cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}  
+    \multicolumn{1}{|c|}{DNAcopy} &
+    \multicolumn{1}{c|}{1.58.0} &
+    \multicolumn{1}{c|}{R} &
+    \multicolumn{1}{c|}{Segmentação binária circular (CBS)} &
+    \multicolumn{1}{c|}{\cite{Olshen2004}}
+  \\  
+  \cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}  
+    \multicolumn{1}{|c|}{fastseg} &
+    \multicolumn{1}{c|}{1.30.0} &
+    \multicolumn{1}{c|}{R} &
+    \multicolumn{1}{c|}{Estrutura Bayesiana} &
+    \multicolumn{1}{c|}{\cite{Baldi2001}}
+  \\  
+  \cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}  
+    \multicolumn{1}{|c|}{iSeg} &
+    \multicolumn{1}{c|}{1.3.2} &
+    \multicolumn{1}{c|}{C++} &
+    \multicolumn{1}{c|}{\textit{T-}testes simples para calcular \textit{p-}valores} &
+    \multicolumn{1}{c|}{\cite{Girimurugan2018}}
+  \\  
+  \cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}  
+    \multicolumn{1}{|c|}{CGHSeg} &
+    \multicolumn{1}{c|}{1.0.2} &
+    \multicolumn{1}{c|}{R} &
+    \multicolumn{1}{c|}{Modelos lineares misto} &
+    \multicolumn{1}{c|}{\cite{Picard2011}}
+  \\
+  \cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\cline{5-5}  
+    \multicolumn{1}{|c|}{ExomeDepth} &
+    \multicolumn{1}{c|}{1.1.10} &
+    \multicolumn{1}{c|}{R} &
+    \multicolumn{1}{c|}{Modelo beta-binomial para ajuste de profundidade} &
+    \multicolumn{1}{c|}{\cite{Plagnol2012}}
+  \\ 
+  \hline
+
+ \end{tabular}
+ \end{adjustbox}}
+\end{table}

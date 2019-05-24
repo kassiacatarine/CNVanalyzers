@@ -1,0 +1,46 @@
+\begin{algorithm}
+    \caption{Pruned Exact Linear Time (PELT).\label{alg:pelt}}
+    \KwIn{
+    Um conjunto de dados $(y1, y2, ..., yn)$ denominado como $Y$.\\
+    Uma constante de penalidade denominada \beta.\\
+    Uma função de custo $C(.)$ para medir o ajuste dependendo dos dados.\\
+    Uma constante K.
+    }
+    \KwOut{Vetor de pontos de mudança encontrados $\tau = (\tau_1, ..., \tau_m, \tau_m_+_1)$}
+    \Begin{
+        Inicialização: 
+        $n = length(Y)$\\
+        $F(0) = -$\beta\\
+        $s.set = {0}$\\
+        \For{$t\leftarrow 1$ \KwTo $n$} {
+            $F(t) =$ \infty\\
+            \tcc{Calcular o custo total esperado de $t$ de acordo com $s$}
+            \For{$s \in s.set$} {
+                $p = F(s)+C(s +1,t)+\beta$\\
+                \tcc{Se a redução feita for por meio do s}
+                \If{$p < F(t)$}{
+                    \tcc{Registrar nova estimativa para $F(t)$}
+                    $F(t) = p$\\
+                    \tcc{Registrar o melhor ponto de mudança anterior em $t$ igual a $s$}
+                    $r(t) = s$
+                }
+            }
+        }
+        \For{$s \in s.set$}{
+            \If{$F(s)+C(s +1,t)≥F(t)$}{
+                $Remove(s.set, s)$
+            }
+        }
+        $Append(s.set,t)$\\
+        \tcc{Contruir um vetor $\tau$ de $r$}
+        $changepoint = n$\\
+        $i = 1$\\
+        \While {changepoint \not= 0} {
+            $\tau(i) = changepoint$\\
+            $changepoint =r (changepoint)$\\
+            $i = i + 1$
+        }
+        \tcc{Inverter o vetor $\tau$ para obtemos a sequencia correta $(\tau_1, ..., \tau_m, \tau_m_+_1)$}
+        $\tau = Sort(\tau)$
+    }
+\end{algorithm}
