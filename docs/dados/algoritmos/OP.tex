@@ -5,14 +5,16 @@
     Uma constante de penalidade denominada \beta.\\
     Uma função de custo $C(.)$ para medir o ajuste dependendo dos dados.
     }
-    \KwOut{Vetor de pontos de mudança encontrados $\tau = (\tau_1, ..., \tau_m, \tau_m_+_1)$}
+    \KwOut{
+    Vetor de pontos de mudança encontrados $\tau = (\tau_1, ..., \tau_m, \tau_{m+1})$
+    }
     \Begin{
         Inicialização: 
         $n = length(Y)$\\
         $F(0) = -$\beta\\
         \For{$t\leftarrow 1$ \KwTo $n$} {
             $F(t) =$ \infty\\
-            \tcc{Pecorre todo o conjunto de dados para cada ponto $y_t$ para encontrar o melhor ponto de mudança anterior $y_s$ }
+            \tcc{Percorre todo o conjunto de dados para cada ponto $y_t$ para encontrar o melhor ponto de mudança anterior $y_s$ }
             \For{$s \leftarrow 0$ \KwTo $t-1$}{
                 \tcc{Calcular o custo total esperado de $t$ de acordo com $s$}
                 $p = F(s)+C(s +1,t)+\beta$\\

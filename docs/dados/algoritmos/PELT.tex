@@ -6,7 +6,7 @@
     Uma função de custo $C(.)$ para medir o ajuste dependendo dos dados.\\
     Uma constante K.
     }
-    \KwOut{Vetor de pontos de mudança encontrados $\tau = (\tau_1, ..., \tau_m, \tau_m_+_1)$}
+    \KwOut{Vetor de pontos de mudança encontrados $\tau = (\tau_{1}, ..., \tau_{m}, \tau_{m+1})$}
     \Begin{
         Inicialização: 
         $n = length(Y)$\\
@@ -16,7 +16,7 @@
             $F(t) =$ \infty\\
             \tcc{Calcular o custo total esperado de $t$ de acordo com $s$}
             \For{$s \in s.set$} {
-                $p = F(s)+C(s +1,t)+\beta$\\
+                $p = F(s)+C(s + 1,t)+\beta$\\
                 \tcc{Se a redução feita for por meio do s}
                 \If{$p < F(t)$}{
                     \tcc{Registrar nova estimativa para $F(t)$}
@@ -40,7 +40,7 @@
             $changepoint =r (changepoint)$\\
             $i = i + 1$
         }
-        \tcc{Inverter o vetor $\tau$ para obtemos a sequencia correta $(\tau_1, ..., \tau_m, \tau_m_+_1)$}
+        \tcc{Inverter o vetor $\tau$ para obtemos a sequencia correta $(\tau_1, ..., \tau_m, \tau_{m+1})$}
         $\tau = Sort(\tau)$
     }
 \end{algorithm}
