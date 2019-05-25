@@ -90,7 +90,7 @@ Uma linhagem celular GM03576, pertencente ao conjunto de dados do Coriell, demon
 
 O \cite{Snijders2001}, apresenta uma confirmação dos ganhos e perdas relatados acima, na \autoref{fig:coriell-cnv}-c, destacando os ganhos como pontos na cor verde e a perda como pontos na cor vermelha.
 
-\subsection{MÉTODOS DE DETECÇÃO} 
+\subsection{Métodos de Detecção} 
 
 A fim de estudar e descobrir as principais características acerca das regiões do genoma, sendo elas a codificante e a não codificante, a investigação da detecção das variações no número de cópias é essencial para o processo de descoberta de peculiaridades relacionadas a amostra. Para alcançar esse objetivo, \cite{Zhao2013} descreve existe cinco estratégias diferentes a serem aplicadas na detecção, sendo elas as detalhadas na \autoref{fig:estrategias-deteccao-cnv}.
 
@@ -106,7 +106,7 @@ As abordagens da \autoref{fig:estrategias-deteccao-cnv} apresenta vantagens e li
 
 O desenvolvimento de aplicações ligadas a essas estratégias se dá em linguagens de programação como R, C/C++, Java e outras. Apresentando diferentes abordagens para que a \textit{copy number variation} seja identificada e exposta, tentando alcançar uma maior performance \cite{Zhao2013}. 
 
-\subsection{MÉTODOS AVALIADOS} 
+\subsection{Métodos Avaliados} 
 
 Nesta seção será apresentado a descrição alguns métodos focados na análise de \textit{copy number variation} que utilizam a estratégia de detecção baseada em profundidade em leitura (PL), ou seja, aplicações implementado modelos estatísticos focados em encontrar pontos de mudanças em uma série temporal, para alcançar o objetivo de encontrar a variação em dados do cromossomo \cite{Zhao2013}. A maioria das ferramentas descritas a seguir possuem natureza \textit{opensource}, assim sendo possível a contribuição da comunidade para o seu crescimento, com essa característica em mente, a evolução do mesmo pode ocorrer apos a publicação deste estudo, alterando a versão listada na \autoref{qua:ferramentas-de-deteccao-de-cnv}.
 
@@ -123,7 +123,7 @@ A estimação do número de cópias pode ser resolvida de forma a aplicar algori
 
 Os projetos apresentados na \autoref{qua:ferramentas-de-deteccao-de-cnv} possui suas peculiaridades de acordo com o método utilizado para identificação de CNVs, sendo alguns deles adaptados especificamente para a sua análise, como nos algoritmos implementados no DNAcopy, fastseg, CGHSeg, ExomeDepth. O iSeg é o único listado que se difere das ferramentas citadas acima, oferecendo uma análise genômica que abrange variação do número de cópias de DNA, ocupação do nucleossomo, sensibilidade à nuclease e dados de sensibilidade diferencial à nuclease \cite{Girimurugan2018}. 
 
-\section{CHANGE POINT DETECTION} 
+\section{CHANGE POINT DETECTION}
 
 % Introdução ao assunto CPD 
 O estudo de dados coletados e distribuídos ao longo de um determinado tempo, também denominado como um série temporal (Time Serie/TS), é uma ferramenta muito utilizada para a observação, previsão e aprendizado de padrões em diversas áreas da ciência. Um problema recorrente ao analisar TS é a identificação de um ponto de variação que não era esperado no decorrer dos dados transcritos no gráfico, esse efeito é denominado como \textit{Change Point Detection} (Detecção de Ponto de Mudança/CPD) \cite{Aminikhanghahi2017}.
@@ -143,7 +143,7 @@ A aplicação de desse conceito tem sido bastante explorada em vários cenários
 
 Os objetivos fixados ao estudar pontos de mudança geralmente estão entre saber se existe alguma variação, e se existir saber se é mais de uma e quais os seus respectivos locais em um determinado tempo \cite{Chen1-2000}.
 
-\subsection{FORMULAÇÃO DO PROBLEMA}
+\subsection{Formulação do Problema}
 
 Seja $X_1, X_2, ..., X_n$ uma sequência de vetores aleatórios independentes (variáveis) com funções de distribuição de probabilidade $F_1, F_2, ..., F_n$, respectivamente. Então, o problema de \textit{change point} é testar a seguinte hipótese nula:
 
@@ -166,7 +166,7 @@ onde $q$ e $k_1, k_2, ..., k_q$ precisam ser estimados. Essas hipóteses combina
 
 As hipóteses apresentadas se adéquam a problemas relacionado a busca de um simples ponto de mudança, entretanto ela pode ser adaptada para aderirem problemas de múltiplos pontos de mudança em uma coleção de dados \cite{Chen1-2000}. 
 
-\subsection{TIPOS DE PONTO DE MUDANÇA} 
+\subsection{Tipos de Pontos de Mudança} 
 
 Os pontos de mudança podem ser observados a partir de uma representação gráfica das distribuições dos valores de uma coleção. Contudo, as mudanças ocorridas podem ser classificadas de acordo com o tipo de mudança, seja ela, mudança na média, na variância, em ambos simultaneamente, além de vários tipos de modelos propostos ao longo do tempo \cite{Chen2-2000}. 
 
@@ -180,7 +180,7 @@ A aplicação desses modelos de ponto de mudança é apresentada por diversos au
 % Ligar CPD ao CNV
 % A CPD é explorada em diversos campos de estudo por ser um tópico relevante no observação de uma coleção, com o surgimento do NGS houve um grande aumento em pesquisas relacionadas a análise de ponto de mudança focados em CNV, impulsionando o desenvolvimento de aplicações que usam os algoritmos propostos na formulação de \textit{Change Point Detection} \cite{Xi2011}.
 
-\subsection{ALGORITMOS RELACIONADOS}
+\subsection{Algoritmos Relacionados}
 
 Está seção apresentará 
 Existe variados tipos de algoritmos responsáveis por segmentar os dados e desvendar o CPD por meio das características apresentadas nos próprios \cite{Aminikhanghahi2017}.
