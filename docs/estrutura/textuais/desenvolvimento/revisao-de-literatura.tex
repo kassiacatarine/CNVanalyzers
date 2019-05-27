@@ -6,6 +6,7 @@
 A base teórica necessária para a realização da pesquisa e o entendimento do estudo é apresentada nesse capítulo, destacando os conceitos de Exoma, Sequenciamento do DNA, \textit{Copy Number Variation}, \textit{Change Point Detection}, \textit{Circular Binary Segmentation}, \textit{Graph Spectrum}, PELT e Sistema R cuja finalidade é reunir as evidências e contribuições sobre o uso do processo de algoritmos de detecção de pontos de mudança no contexto de anotação de \textit{copy number variation} utilizando os conceitos do Sistema R em seu desenvolvimento.
 
 \section{EXOMA}
+\label{sec:exoma}
 
 O genoma é constituído de regiões codificantes e não codificantes, elas denominadas como \textit{éxons} e \textit{íntrons} respectivamente. As regiões codificantes constituem-se de sequências de proteínas, elas representam cerca de 1\% do genoma \cite{Ng2009}.Na \autoref{fig:figura-exoma} é representado essas regiões presentes na estrutura do DNA e RNA, podendo identificar os \textit{éxons} como as áreas destacadas com uma camada colorida e os \textit{íntrons} em cada espaço existente entre as sequências dos \textit{éxons}.
 
@@ -27,6 +28,8 @@ A utilização do teste de sequenciamento do exoma possibilitou um rendimento de
 O sequenciamento completo do exoma vem sendo utilizado em demasiados cenários oriundos de variações gênicas, como em descobertas de perda auditiva \cite{Likar2018}, encefalopatia epiléptica \cite{Allen2016}, mutação gerada a partir de uma determinada doença \cite{Lin2019}, hipotireoidismo congênito \cite{Fu2019}, entre outros. Essas pesquisas são realizadas em utilizando conjuntos de amostras de indivíduos com características semelhantes ou amostras com características extremamente opostas \cite{Bamshad2011}, para que sejam analisadas e comparadas, na tentativa de identificar onde alguma variação no número de cópias, que causa um determinado comportamento está situada encontra.
 
 \section{SEQUENCIAMENTO DO DNA} 
+\label{sec:sequenciamentoDoDna}
+
 % Sobre o sequenciamento 
 O estudo acerca do DNA e das informações contidas nele obteve um grande impulso por parte de vários cientistas do mundo inteiro no século XX, e com isso surgiu um movimento responsável pela investigação dos componentes do DNA, denominado como o Projeto Genoma Humano \cite{Lander2001}. Esse projeto levantou investimentos científico e capital, com um orçamento que variando entre US\$ 3 bilhões a US\$ 53 bilhões, para obter um maior entendimento das características do DNA a partir do sequenciamento completo do genoma \cite{Marian2011}. 
 
@@ -51,6 +54,7 @@ O início da análise computacional dos dados de sequenciamento foi abordado por
 % Explicar os dados gerados Dataset e como estão disponíveis 
 
 \section{COPY NUMBER VARIATION} 
+\label{sec:copyNumberVariation}
 
 % Introdução ao assunto do CNV 
 A \textit{copy number variation} (CNV) ou no português variação no número de cópias, são alterações que ocorrem na região genômica, elas se classificam como inserções, duplicações e deleções na estrutura do cromossomo, como representado na \autoref{fig:figura-copy-number-variation} \cite{Zhao2013,Redon2006}. Essas variações podem ser encontradas em todos os seres humanos, podendo não representar nenhuma alteração ou ser responsável por doenças de origem mendeliana, sua existência e descoberta são essenciais para o entendimento da composição genômica \cite{Redon2006,Feuk2006}.
@@ -116,14 +120,15 @@ A detecção de CNVs passou por tecnologias como cariotipagem e hibridização f
 
 O método de identificação de CNV aplicado a dados gerados com ferramentas do NGS baseado em PL é utilizado para estimar o número de cópias, determinando sua localidade de acordo com as posições existente do cromossomo de amostra. A descoberta de CNVs segue quatro passos ao utilizar essa abordagem: mapeamento, normalização, estimativa do número de cópias e segmentação \cite{Zhao2013}.
 
-A estimação do número de cópias pode ser resolvida de forma a aplicar algoritmos nos dados da amostra, como pode ser visto em algumas ferramentas existentes de detecção de CNV \autoref{qua:ferramentas-de-deteccao-de-cnv}. Esses modelos assumem a existência de perdas ou ganhos ao longo do cromossomo, aplicando algoritmos de distribuição de probabilidade na média e ou variância, a fim de detectar a localização de alguma variação no número de cópias \cite{Zhao2013}.
+A estimação do número de cópias pode ser resolvida de forma a aplicar algoritmos nos dados da amostra, como pode ser visto em algumas ferramentas existentes de detecção de CNV presentes no \autoref{qua:ferramentas-de-deteccao-de-cnv}. Esses modelos assumem a existência de perdas ou ganhos ao longo do cromossomo, aplicando algoritmos de distribuição de probabilidade na média e ou variância, a fim de detectar a localização de alguma variação no número de cópias \cite{Zhao2013}.
 
 
 \input{dados/quadros/ferramentas-de-deteccao-de-cnv.tex}
 
-Os projetos apresentados na \autoref{qua:ferramentas-de-deteccao-de-cnv} possui suas peculiaridades de acordo com o método utilizado para identificação de CNVs, sendo alguns deles adaptados especificamente para a sua análise, como nos algoritmos implementados no DNAcopy, fastseg, CGHSeg, ExomeDepth. O iSeg é o único listado que se difere das ferramentas citadas acima, oferecendo uma análise genômica que abrange variação do número de cópias de DNA, ocupação do nucleossomo, sensibilidade à nuclease e dados de sensibilidade diferencial à nuclease \cite{Girimurugan2018}. 
+Os projetos apresentados no \autoref{qua:ferramentas-de-deteccao-de-cnv} possui suas peculiaridades de acordo com o método utilizado para identificação de CNVs, sendo alguns deles adaptados especificamente para a sua análise, como nos algoritmos implementados no DNAcopy, fastseg, CGHSeg, ExomeDepth. O iSeg é o único listado que se difere das ferramentas citadas acima, oferecendo uma análise genômica que abrange variação do número de cópias de DNA, ocupação do nucleossomo, sensibilidade à nuclease e dados de sensibilidade diferencial à nuclease \cite{Girimurugan2018}. 
 
 \section{CHANGE POINT DETECTION}
+\label{sec:changePointDetection}
 
 % Introdução ao assunto CPD 
 O estudo de dados coletados e distribuídos ao longo de um determinado tempo, também denominado como um série temporal (Time Serie/TS), é uma ferramenta muito utilizada para a observação, previsão e aprendizado de padrões em diversas áreas da ciência. Um problema recorrente ao analisar TS é a identificação de um ponto de variação que não era esperado no decorrer dos dados transcritos no gráfico, esse efeito é denominado como \textit{Change Point Detection} (Detecção de Ponto de Mudança/CPD) \cite{Aminikhanghahi2017}.

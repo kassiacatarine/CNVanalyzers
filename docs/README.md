@@ -1,4 +1,4 @@
-# Template LaTeX para Trabalho de Conclusão de Curso da UTFPR (UTFPR-GP/Curso de TSI) 
+# Trabalho de Conclusão de Curso da UTFPR
 
 Site: http://tcc.tsi.gp.utfpr.edu.br/paginas/modelos-latex-da-utfpr
 
