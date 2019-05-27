@@ -3,25 +3,27 @@
 \chapter{INTRODUÇÃO}
 \label{chap:introducao}
 
-% Contextualização
-% Descrição geral
-% Problema de pesquisa
-
 % Importância de estudar o CNV
-A variação no número de cópias (CNVs) é um dos fatores que contribuem para a expansão e diversidade da família de genes, ela foi observada como alterações ocorridas em larga escada de inserções, deleções e duplicações na região genômica \cite{Perry2009,Zhao2013,Redon2006,Costain2016}. 
+A variação no número de cópias (Copy Number Variation/CNVs) é um dos fatores que contribuem para a expansão e diversidade da família de genes, ela foi observada como alterações ocorridas em larga escada de inserções, deleções e duplicações na região genômica \cite{Perry2009,Zhao2013,Redon2006,Costain2016}. 
 As CNVs podem ser identificada como uma variação neutra ou como modificadores de sucessibilidade a doenças \cite{Costain2016,Perry2009}.
 
 % Estratégia de identificar CNV e ligação a doenças
 A análise da região genômica pode ser realizada graças as tecnologias desenvolvidas para seu o sequenciamento, permitindo a observação de variantes de DNA \cite{Sathirapongsasuti2011}. Embora o sequenciamento completo do genoma seja uma abordagem utilizada para a investigação de CNVs, uma estratégia mais viável, econômica e eficiente no tempo para o estudo da base genética da doença é o sequenciamento completo do exoma, sendo que 85\% dos variantes ligados a doenças mendelianas são encontrados nele \cite{Chong2015,Sathirapongsasuti2011,Fromer2012}.
 
 % Ligação aos modelos estatísticos
-Devido a quantidade, complexidade e ruído dos dados obtidos a partir sequenciamento das regiões codificantes do genoma (exoma), muitos ferramentas de detecção de CNVs foram desenvolvidos para determinar os tipos e quantidades de variações, e os locais onde se situam \cite{Fromer2012,Tan2014}. A utilização de modelos estatísticos na descoberta de variações no mapa de dados gerados no sequenciamento do exoma foi uma das abordagens que obteve mais sucesso na integração das ferramentas com o sequenciamento \cite{Tan2014}.
+Devido a quantidade, complexidade e ruído dos dados obtidos a partir sequenciamento das regiões codificantes do genoma (exoma), muitos ferramentas de detecção de CNVs foram desenvolvidos para determinar os tipos, quantidades e a localização de variações \cite{Fromer2012,Tan2014}. Esses fatores foram alcançados devido a utilização de modelos estatísticos na descoberta de variações no mapa de dados gerados no sequenciamento do exoma, essa é uma das abordagens que obteve mais sucesso na integração das ferramentas com o sequenciamento devido a sua eficiência \cite{Tan2014}.
 
-% Porque que desses fatores o CPD
+A utilização de modelos estatísticos aplicados para detecção de \textit{copy number variation} visa encontrar pontos de mudanças em uma representação gráfica dos dados, assim facilitando a determinação de uma variação de acordo com a localização do ponto de mudança \cite{Zhao2013}. Essa técnica se tornou popular, sendo desenvolvidos diversas ferramentas que detecta pontos de mudanças (Change Point Detection/CPD) focadas na análise de CNV \cite{Olshen2004,Baldi2001,Girimurugan2018,Picard2011,Plagnol2012,Muggeo2010}. 
 
-% Porque a analise
+Apesar das diversas técnicas e ferramentas existentes de CPD, nenhuma delas é capaz de identificar todas as CNVs presentes no exoma \cite{Zhao2013}, entretanto a utilização de algumas dessas técnicas em determinada situação alcança uma maior efetividade ao encontrar as variações. Essa diferença entre as técnicas pode ser vista ao comparar a execução de cinco algoritmos específicos de detecção de variações no números de cópias na \autoref{fig:ferramentas-cnv} \cite{Muggeo2010}.
 
-% Apresentar o objetivo
+\begin{figure}[!htb]
+    \centering
+    \caption{Segmentação da linha celular de câncer de mama MDA157, onde cada linha representa um cromossomo, indexado ao lado esquerdo}
+    \includegraphics[width=0.8\textwidth]{./dados/figuras/ferramentas-cnv}
+    \fonte{\cite{Muggeo2010}}
+    \label{fig:ferramentas-cnv}
+\end{figure}
 
 
 % Contextualizar do estudo de CNV
@@ -43,6 +45,8 @@ Devido a quantidade, complexidade e ruído dos dados obtidos a partir sequenciam
 % Diante das questões expostas, a exploração de novas algoritmos capaz de demonstrar uma melhor apresentação para detectar o CP vem sendo estudada, tanto no meio da estatística quanto no da bioinformática (referencia). Mas com a evolução e melhora das tecnologias, temos cada vez mais nitidez nas extração dos dados do exoma, assim necessitando de algoritmos e técnicas mais potentes para inspeção.
 
 \section{JUSTIFICATIVA}
+
+
 
 \section{OBJETIVOS}
 
