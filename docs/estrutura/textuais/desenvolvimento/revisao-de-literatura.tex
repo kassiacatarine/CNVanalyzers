@@ -152,20 +152,32 @@ Os objetivos fixados ao estudar pontos de mudança geralmente estão entre saber
 
 Seja $X_1, X_2, ..., X_n$ uma sequência de vetores aleatórios independentes (variáveis) com funções de distribuição de probabilidade $F_1, F_2, ..., F_n$, respectivamente. Então, o problema de \textit{change point} é testar a seguinte hipótese nula:
 
-\[H_0 : F_1 = F_2 = ... = F_n\]
+\begin{equation}
+    H_0 : F_1 = F_2 = ... = F_n
+    \label{eq:cpd-hupotese-nula-1}
+\end{equation}
 
 versus a hipótese alternativa
 
-\[H_{1} : F_{1} = ... = F_{k_1}\neq F_{{k_1}+1} = ... = F_{k_2}\neq F_{{k_2}+1} = ... F_{k_q}\neq F_{{k_q}+1} ... = F_{n},\]
+\begin{equation}
+    H_{1} : F_{1} = ... = F_{k_1}\neq F_{{k_1}+1} = ... = F_{k_2}\neq F_{{k_2}+1} = ... F_{k_q}\neq F_{{k_q}+1} ... = F_{n},
+    \label{eq:cpd-hipotese-alternativa-1}
+\end{equation}
 
 onde $1 < k_1 < k_2 < ... < k_q <n$, $q$ é o número desconhecido de pontos de mudança e $k_1, k_2, ..., k_q$ são as respectivas posições que devem ser estimadas. Se as distribuições $F_1, F_2, ..., F_n$ pertencem a uma família paramétrica comum $F(\theta)$, 
 então o problema do ponto de mudança é testar hipóteses sobre os parâmetros da população $\theta_i$, com a sequência $i = 1 ..... n$
 
-\[H_0 : \theta_{1} = \theta_{2} = ... = \theta_{n} = \theta (desconhecido)\]
+\begin{equation}
+    H_0 : \theta_{1} = \theta_{2} = ... = \theta_{n} = \theta (desconhecido)
+    \label{eq:cpd-hupotese-nula-2}
+\end{equation}
 
 versus a alternativa
 
-\[H_1 : \theta_{1} = ... = \theta_{k_1} \not = \theta_{{k_1}+1} = ... = \theta_{2} \not = ... \not = \theta_{{k_q}-1} = ... = \theta_{k_q} \not = \theta_{{k_q}+1}... = \theta_{n},\]
+\begin{equation}
+    H_1 : \theta_{1} = ... = \theta_{k_1} \not = \theta_{{k_1}+1} = ... = \theta_{2} \not = ... \not = \theta_{{k_q}-1} = ... = \theta_{k_q} \not = \theta_{{k_q}+1}... = \theta_{n},
+    \label{eq:cpd-hipotese-alternativa-2}
+\end{equation}
 
 onde $q$ e $k_1, k_2, ..., k_q$ precisam ser estimados. Essas hipóteses combinadas revelam aspectos da inferência de ponto de mudança, ou seja, os objetivos citados acima. 
 
@@ -219,7 +231,10 @@ A diferença entre as descrições dos algoritmos propostos pode ser vista a par
 
 Ao realizar a minimização, assumimos que existe uma constante $K$ tal que, para todo $t < s < T$, onde t nunca poderá ser o melhor ponto de mudança antes de T. 
 
-\[C\left ( y\left ( t+1 \right ):s \right ) + C\left ( y\left ( t+1 \right ):T \right ) + K \leq C\left ( y\left ( t+1 \right ):T \right )\]
+\begin{equation}
+    C\left ( y\left ( t+1 \right ):s \right ) + C\left ( y\left ( t+1 \right ):T \right ) + K \leq C\left ( y\left ( t+1 \right ):T \right )
+    \label{eq:calculo-pelt}
+\end{equation}
 
 
 \subsubsection{SpecDetec}
@@ -261,21 +276,33 @@ Uma matriz de confusão é composta por duas dimensões, sendo elas os valores r
    \item Acurácia (AC):
    \begin{description}
     \item Medida usada para calcular o total de previsões corretas dentro dos resultados obtidos
-    \[AC=\sum_{i=1}^nN_{ii}/\sum_{i=1}^n\sum_{j=1}^nN_{ij}\]
+    \begin{equation}
+        AC=\sum_{i=1}^nN_{ii}/\sum_{i=1}^n\sum_{j=1}^nN_{ij}
+    \label{eq:mc-acuracia}
+    \end{equation}
     \end{description}
     \item Precisão (PC):
     \begin{description}
     \item Medida usada para saber a exatidão obtida por determinada classe analisada
-    \[PC_i=N_{ii}/\sum_{k=1}^nN_{ki}\]
+    \begin{equation}
+        PC_i=N_{ii}/\sum_{k=1}^nN_{ki}
+    \label{eq:mc-precisao}
+    \end{equation}
     \end{description}
     \item Sensibilidade (SB):
     \begin{description}
     \item Medida usada para saber a probabilidade de acerto de uma determinada classe
-    \[SB_i=N_{ii}/\sum_{k=1}^nN_{ik}\]
+    \begin{equation}
+        SB_i=N_{ii}/\sum_{k=1}^nN_{ik}
+        \label{eq:mc-sensibilidade}
+    \end{equation}
     \end{description}
     \item F-Score (Fscore):
     \begin{description}
     \item Medida usada para obter a média harmônica entre a precisão e a sensibilidade
-    \[Fscore_i=\frac{2\times PC_i\times SB_i}{PC_i+SB_i}\]
+    \begin{equation}
+        Fscore_i=\frac{2\times PC_i\times SB_i}{PC_i+SB_i}
+        \label{eq:mc-fscore}
+    \end{equation}
     \end{description}
 \end{itemize}
