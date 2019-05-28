@@ -1,8 +1,8 @@
 \begin{algorithm}
     \caption{Optimal Partitioning Algorithm (OP).\label{alg:op}}
     \KwIn{
-    Um conjunto de dados $(y1, y2, ..., yn)$ denominado como $Y$.\\
-    Uma constante de penalidade denominada \beta.\\
+    Um conjunto de dados $(y1, y2, ..., yn)$ denominado como $Y$. \\
+    Uma constante de penalidade denominada $\beta$.\\
     Uma função de custo $C(.)$ para medir o ajuste dependendo dos dados.
     }
     \KwOut{
@@ -11,9 +11,9 @@
     \Begin{
         Inicialização: 
         $n = length(Y)$\\
-        $F(0) = -$\beta\\
+        $F(0) = -\beta$\\
         \For{$t\leftarrow 1$ \KwTo $n$} {
-            $F(t) =$ \infty\\
+            $F(t) = \infty$\\
             \tcc{Percorre todo o conjunto de dados para cada ponto $y_t$ para encontrar o melhor ponto de mudança anterior $y_s$ }
             \For{$s \leftarrow 0$ \KwTo $t-1$}{
                 \tcc{Calcular o custo total esperado de $t$ de acordo com $s$}
@@ -30,12 +30,12 @@
         \tcc{Contruir um vetor $\tau$ de $r$}
         $changepoint = n$\\
         $i = 1$\\
-        \While {changepoint \not= 0} {
+        \While {$changepoint \not= 0$} {
             $\tau(i) = changepoint$\\
             $changepoint =r (changepoint)$\\
             $i = i + 1$
         }
-        \tcc{Inverter o vetor $\tau$ para obtemos a sequencia correta $(\tau_1, ..., \tau_m, \tau_m_+_1)$}
+        \tcc{Inverter o vetor $\tau$ para obtemos a sequencia correta $(\tau_1, ..., \tau_m, \tau_{m+1})$}
         $\tau = Sort(\tau)$
     }
 \end{algorithm}
