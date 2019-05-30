@@ -27,13 +27,15 @@ Apesar das diversas técnicas e ferramentas existentes de CPD, nenhuma delas é 
 
 A \autoref{fig:ferramentas-cnv} demostra que a variação da localização de pontos de mudanças relativos a um conjunto de dados (\textit{dataset}), pode apresentar mudanças de acordo com o algoritmo e a técnica implementada para análise na ferramenta. Esse mesmo efeito, também pode ser identificado em comparações de algoritmos de CPD \cite{Ducre-Robitaille2003,Reeves2007}. 
 
-O desenvolvimento de técnicas de análises de CPD e CNVs, são frequentes na área da computação, sendo criados diversas teorias acerca dos assuntos em um período dois anos do ano atual \cite{Girimurugan2018,Uzai2019,Chu2019}, essa evolução pode ser observada sobre o viés da busca de melhoria contínua na eficiência em relação aos métodos existentes.
+O desenvolvimento de técnicas de análises de CPD e CNVs, são frequentes na área da computação, sendo criados diversas teorias e bibliotecas acerca dos assuntos em um período relativamente próximo\footnote{Cerca de até dois anos atrás, relativo ao ano atual.} \cite{Girimurugan2018,Uzai2019,Chu2019}, essa evolução pode ser observada sobre o viés da busca de melhoria contínua na eficiência, em relação aos métodos existentes.
 
-
+Entretanto, apesar dos testes de eficiência realizado em um determinado cenário pelo autor dos métodos em suas publicações, ainda resta algumas dúvidas sobre a sua adaptação em cenários específicos em comparação a algoritmos amplamente difundidos. Portanto, buscou-se reunir dados e estudos de diferentes ferramentas de CPD em um único ambiente, afim de especializa-los em leitura de dados de variações de números de cópias.
 
 \section{JUSTIFICATIVA}
 
+A necessidade de analisar variações no número de copias é essencial para a determinação da estrutura do genoma humano e as possíveis modificações sofridas no material genético, já que é a partir dele que as características genéticas são extraídas. A observação e anotação de variação no número é um desafio constante, pois em alguns casos ela pode ser associado a uma doença \cite{McCarroll2007}. A detecção de variações utilizando pontos de mudanças é uma das abordagens existentes que apresentaram eficiência na análise, pela adaptação de algoritmos genéricos de CPD em leituras de exoma \cite{Olshen2004,Picard2011,Girimurugan2018}.
 
+Pensando nisso, a proposta para essa pesquisa é fornecer a disponibilização de métodos existentes de detecção de pontos de mudanças no cenário de dados segmentados do exoma em um único ambiente, buscando identificar a aceitabilidade e eficiência da aplicação no contexto proposto. O desenvolvimento dessa pesquisa beneficiará pesquisadores, biólogos, especialistas em genética e pessoas que possuem interesses relacionado a estudo da genética e de suas doenças, no que diz respeito da facilidade da execução de diferentes métodos de pontos de mudanças a partir de um único meio.
 
 \section{OBJETIVOS}
 
@@ -47,15 +49,15 @@ Aplicar o conceito de detecção de pontos de mudanças, utilizando diferentes a
     \item Explicar a importância de \textit{copy number variation}.
     \item Descrever o conceito de \textit{change point detection}, caracterizando com exemplos, os algoritmos desenvolvidos para esse objetivo.
     \item Analisar a aplicabilidade dos algoritmos de CPD para a CNV, citando exemplos dos mesmos.
-    \item Desenvolver um ambiente que dispõe de integrações com algoritmos de CPD
-    \item Fornecer um algoritmo focado em leitura de dados de sequenciamento de DNA
+    \item Desenvolver um ambiente que dispõe de integrações com algoritmos de CPD.
+    \item Fornecer um algoritmo focado em leitura de dados de sequenciamento de DNA.
 \end{itemize}
 
 \section{ORGANIZAÇÃO DO TEXTO}
 
 Este trabalho se organiza da seguinte forma: 
 
-\autoref{chap:introducao} - Introdução: Situa o leitor na área de pesquisa em que o trabalho é focado, definindo o porque do seu desenvolvimento e os objetivos a serem alcançados com a conclusão do projeto. 
+\autoref{chap:introducao} - Introdução: Situa o leitor na área de pesquisa em que o trabalho é focado, definindo o porque do seu desenvolvimento e os objetivos a serem alcançados com a conclusão do projeto.
 
 \autoref{chap:fundamentacaoTeorica} - Revisão de Literatura: Apresenta uma pesquisa que contém conceitos e reflexões acerca dos principais conceitos referente ao trabalho proposto. Nele é apresentado temas relacionado ao trabalho proposto como a definição de exoma e a importância da utilização dele para descobertas de doenças (\autoref{sec:exoma}), o estudo acerca do surgimento e a evolução de tecnologias capazes de obter os componentes do genoma (\autoref{sec:sequenciamentoDoDna}), a definição de CNVs, ressaltando a importância do estudo e o uso dos métodos e ferramentas de detecção nessa variação genética (\autoref{sec:copyNumberVariation}), a formulação de uma das estratégias de detecção de CNV, a detecção de pontos de mudanças, sendo apresentado algoritmos específicos para utilização nesse tipo de situação (\autoref{sec:changePointDetection}) e a conceituação de matriz de confusão para aplicação em estudos com o objetivo de análise de performance \autoref{sec:matrizDeConfusao}. 
 
@@ -63,4 +65,4 @@ Este trabalho se organiza da seguinte forma:
 
 \autoref{chap:planoDeTrabalho} - Plano de Trabalho: Expõe o cronograma adotado para o desenvolvimento do trabalho, disponibilizando o início e fim de um conjunto de atividades e sua descrição. 
 
-\autoref{chap:conclusao} - Conclusão: Apresenta as considerações finais acerca do trabalho desenvolvido.
+\autoref{chap:consideracoesFinais} - Considerações Finais: Apresenta as considerações finais acerca do trabalho desenvolvido.
