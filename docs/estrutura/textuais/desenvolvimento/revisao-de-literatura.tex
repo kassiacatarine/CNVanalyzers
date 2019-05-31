@@ -34,7 +34,7 @@ O sequenciamento completo do exoma vem sendo utilizado em demasiados cenários o
 O estudo acerca do DNA e das informações contidas nele obteve um grande impulso por parte de vários cientistas do mundo inteiro no século XX, e com isso surgiu um movimento responsável pela investigação dos componentes do DNA, denominado como o Projeto Genoma Humano \cite{Lander2001}. Esse projeto levantou investimentos científico e capital, com um orçamento que variando entre US\$ 3 bilhões a US\$ 53 bilhões, para obter um maior entendimento das características do DNA a partir do sequenciamento completo do genoma \cite{Marian2011}. 
 
 % Objetivo de sequenciamento 
-Com o objetivo de ordenar os nucleotídeos do DNA, decodificando o código genético \cite{Edwards2011}, as primeiras pesquisas relacionadas ao sequenciamento surgiu próximo ao final do século XX, com variadas propostas acerca do assunto, uma delas foi a criação de tecnologias capazes de criar a sequencia completa do genoma humano, mapeando cada partícula existente \cite{Lander2001,HutchisonIII2007}. 
+Com o objetivo de ordenar os nucleotídeos do DNA, decodificando o código genético \cite{Edwards2011}, as primeiras pesquisas relacionadas ao sequenciamento surgiu próximo ao final do século XX, com variadas propostas acerca do assunto, uma delas foi a criação de tecnologias capazes de criar a sequencia completa do genoma humano, mapeando cada partícula existente \cite{Lander2001,HutchisonIII2007}.
 
 A tarefa de sequenciar o genoma humano completo consumou alguns anos para ser finalizada, sendo iniciada em 1990 e concluída oficialmente em 2003, apesar de conter mais de 5000 cientistas em centros de pesquisas do Estados Unidos, Europa e Japão, envolvidos no projeto \cite{HutchisonIII2007}, a sua conclusão tardia se deu por possuir uma certa complexidade ao montar e ordenar os pequenos pedaços sequenciados corretamente, além de possuir um enorme custo estimado em 3 bilhões de dólares para analise do conjunto de cadeias do DNA \cite{Rye2017,HutchisonIII2007}.
 
@@ -71,7 +71,7 @@ A \textit{copy number variation} (CNV) ou no português variação no número de
 % Contexto 
 Com o estudo do genoma humano \cite{Lander2001} houve a possibilidade de descobertas relevantes sobre doenças ao comparar a composição do DNA de várias pessoas, entretanto inicialmente essas descobertas se deu no nível macro, como em números de cromossomos. Portanto, a maior parte das doenças encontradas estavam relacionadas a análise do genoma completo, onde podiam ser vistos a partir de um microscópio \cite{Feuk2006}. 
 
-As tecnologias de sequenciamento do DNA possibilitou a investigação das micropartículas que concebiam o genoma, a partir dela foi possível identificar a existência de pequenas inserções, deleções, inserções e duplicações não identificadas a partir de análises microscópica. De acordo com o estudo dessas variações no número de cópias da estrutura genômica foram vistos uma série de casos onde não representava nenhuma consequência e outros que possuíam uma grande chance de causar doenças de origem mendelianas \cite{Feuk2006,Xi2011}. 
+As tecnologias de sequenciamento do DNA possibilitou a investigação das micropartículas que concebiam o genoma, a partir dela foi possível identificar a existência de pequenas inserções, deleções e duplicações não identificadas a partir de análises microscópica. De acordo com o estudo dessas variações no número de cópias da estrutura genômica foram vistos uma série de casos onde não representava nenhuma consequência e outros que possuíam uma grande chance de causar doenças de origem mendelianas \cite{Feuk2006,Xi2011}. 
 
 % Sobre o estudo 
 O estudo do CNV foi pouco aprofundado até recentemente em comparação com outras classes da variação genética \cite{Redon2006}, mas com o avanço do NGS e o auto rendimento produzido pelos sequenciamentos utilizados, houve um aumento no grau de avaliabilidade dos mesmos, sendo possível o reconhecimento das regiões afetadas, assim mudando essa realidade \cite{Mills2011,Feuk2006}.
@@ -108,7 +108,7 @@ A fim de estudar e descobrir as principais características acerca das regiões 
 
 As abordagens da \autoref{fig:estrategias-deteccao-cnv} apresenta vantagens e limitações de acordo com o cenário a ser aplicado, sendo algumas das vantagens como no MEP em utilizações em leituras de final emparelhadas, ou em ferramentas que utilizam a abordagem LD, onde apresenta um maior desempenho em leituras curtas, mas independente disso, nenhuma das cinco abordagens é capaz de detectar todas as CNVs existentes \cite{Zhao2013}. 
 
-O desenvolvimento de aplicações ligadas a essas estratégias se dá em linguagens de programação como R, C/C++, Java e outras. Apresentando diferentes abordagens para que a \textit{copy number variation} seja identificada e exposta, tentando alcançar uma maior performance \cite{Zhao2013}. 
+O desenvolvimento de aplicações ligadas a essas estratégias se dá em linguagens de programação como R, C/C++, Java e outras. Apresentando diferentes abordagens para que a \textit{copy number variation} seja identificada e exposta, tentando alcançar uma maior performance \cite{Zhao2013}.
 
 \subsection{Métodos Avaliados} 
 
@@ -122,7 +122,6 @@ O método de identificação de CNV aplicado a dados gerados com ferramentas do 
 
 A estimação do número de cópias pode ser resolvida de forma a aplicar algoritmos nos dados da amostra, como pode ser visto em algumas ferramentas existentes de detecção de CNV presentes no \autoref{qua:ferramentas-de-deteccao-de-cnv}. Esses modelos assumem a existência de perdas ou ganhos ao longo do cromossomo, aplicando algoritmos de distribuição de probabilidade na média e ou variância, a fim de detectar a localização de alguma variação no número de cópias \cite{Zhao2013}.
 
-
 \input{dados/quadros/ferramentas-de-deteccao-de-cnv.tex}
 
 Os projetos apresentados no \autoref{qua:ferramentas-de-deteccao-de-cnv} possui suas peculiaridades de acordo com o método utilizado para identificação de CNVs, sendo alguns deles adaptados especificamente para a sua análise, como nos algoritmos implementados no DNAcopy, fastseg, CGHSeg, ExomeDepth. O iSeg é o único listado que se difere das ferramentas citadas acima, oferecendo uma análise genômica que abrange variação do número de cópias de DNA, ocupação do nucleossomo, sensibilidade à nuclease e dados de sensibilidade diferencial à nuclease \cite{Girimurugan2018}. 
@@ -131,7 +130,7 @@ Os projetos apresentados no \autoref{qua:ferramentas-de-deteccao-de-cnv} possui 
 \label{sec:changePointDetection}
 
 % Introdução ao assunto CPD 
-O estudo de dados coletados e distribuídos ao longo de um determinado tempo, também denominado como um série temporal (Time Serie/TS), é uma ferramenta muito utilizada para a observação, previsão e aprendizado de padrões em diversas áreas da ciência. Um problema recorrente ao analisar TS é a identificação de um ponto de variação que não era esperado no decorrer dos dados transcritos no gráfico, esse efeito é denominado como \textit{Change Point Detection} (Detecção de Ponto de Mudança/CPD) \cite{Aminikhanghahi2017}.
+O estudo de dados coletados e distribuídos ao longo de um determinado tempo, também denominado como um série temporal (\textit{Time Serie}/TS), é uma ferramenta muito utilizada para a observação, previsão e aprendizado de padrões em diversas áreas da ciência. Um problema recorrente ao analisar TS é a identificação de um ponto de variação que não era esperado no decorrer dos dados transcritos no gráfico, esse efeito é denominado como \textit{Change Point Detection} (Detecção de Ponto de Mudança/CPD) \cite{Aminikhanghahi2017}.
 
 \begin{figure}[!htb]
     \centering
@@ -181,13 +180,13 @@ versus a alternativa
 
 onde $q$ e $k_1, k_2, ..., k_q$ precisam ser estimados. Essas hipóteses combinadas revelam aspectos da inferência de ponto de mudança, ou seja, os objetivos citados acima. 
 
-As hipóteses apresentadas se adéquam a problemas relacionado a busca de um simples ponto de mudança, entretanto ela pode ser adaptada para aderirem problemas de múltiplos pontos de mudança em uma coleção de dados \cite{Chen1-2000}. 
+As hipóteses apresentadas se adéquam a problemas relacionado a busca de um simples ponto de mudança, entretanto ela pode ser adaptada para aderirem problemas de múltiplos pontos de mudança em uma coleção de dados \cite{Chen1-2000}.
 
-\subsection{Tipos de Pontos de Mudança} 
+\subsection{Tipos de Pontos de Mudança}
 
 Os pontos de mudança podem ser observados a partir de uma representação gráfica das distribuições dos valores de uma coleção. Contudo, as mudanças ocorridas podem ser classificadas de acordo com o tipo de mudança, seja ela, mudança na média, na variância, em ambos simultaneamente, além de vários tipos de modelos propostos ao longo do tempo \cite{Chen2-2000}. 
 
-A aplicação desses modelos de ponto de mudança é apresentada por diversos autores, assim como em \cite{Cheon2010} ao apresentar um a utilização da detecção por média em um modelo Bayesian e no \cite{Shi2017} ao descrever a utilização de um modelo baseado em grafos para análise de modelos de grande dimensão. 
+A aplicação desses modelos de ponto de mudança é apresentada por diversos autores, assim como em \cite{Cheon2010} ao apresentar um a utilização da detecção por média em um modelo Bayesian e no \cite{Shi2017} ao descrever a utilização de um modelo baseado em grafos para análise de modelos de grande dimensão.
 
 
 % A detecção de pontos de mudança pode ser classificada de duas formas, Online e Offline, onde a forma online é um processamento de dados ao vivo, tentando detectar o ponto antes que ocorra realmente. O método de detecção offline possui uma maior flexibilidade em relação ao online, sendo capaz de analisar toda a série disponível para realizar as identificadões necessárias \cite{Aminikhanghahi2017}.
@@ -203,7 +202,7 @@ Nesta seção será apresentado algoritmos desenvolvidos com o proposito de segm
 
 \subsubsection{CBS}
 
-O CBS (Circular Binary Segmentation) é uma modificação de uma estratégia de segmentação binária, proposta com a finalidade de segmentar o cromossomo, apresentando funcionalidades adicionais para normalizar os dados. A segmentação binária é uma técnica aplicada para a determinar a localização de um ponto de mudanças com a aplicação de testes recursivos \cite{Olshen2004}.
+O CBS (\textit{Circular Binary Segmentation}) é uma modificação de uma estratégia de segmentação binária, proposta com a finalidade de segmentar o cromossomo, apresentando funcionalidades adicionais para normalizar os dados. A segmentação binária é uma técnica aplicada para a determinar a localização de um ponto de mudanças com a aplicação de testes recursivos \cite{Olshen2004}.
 
 Um dos objetivo na proposta do CBS foi a identificação de segmentos menores dentro de segmento maiores de mudanças. Devido a níveis de significância pequenos aplicados aos cálculos uma grande quantidade de permutações é realizada na determinação de somente um ponto de mudança, chegando a ordem de dez mil, esse processo é feito para cada segmento existente na coleção de dados \cite{Olshen2004}.
 
@@ -215,7 +214,7 @@ O CBS mostrou ter um desempenho consistente, diante de comparações com técnic
 
 \subsubsection{gSeg}
 
-O gSeg (Graph Segmentation) é um algoritmo baseado em grafos, para a detecção de pontos de mudanças de acordo com o agrupamento de observações próximas das distâncias representadas por grafos, onde será identificado a similaridade entre os pontos, para determinação de uma variação 
+O gSeg (\textit{Graph Segmentation}) é um algoritmo baseado em grafos, para a detecção de pontos de mudanças de acordo com o agrupamento de observações próximas das distâncias representadas por grafos, onde será identificado a similaridade entre os pontos, para determinação de uma variação 
 \cite{Chen2015}. 
 
 A sua execução é dada pela divisão de dois grupos, sendo eles o grupo que vem antes de $\tau$ e o grupo que vem depois de $\tau$, onde cada grupo um número mínimo de observações correspondente a $1 < n_{0} \leq \tau \leq n_{1} < n$ em um único cenário de ponto de mudança, podendo ser adicionado restrições de acordo com o modelo analisado. A partir da divisão, é realizado um teste de grafo, a fim de verificar se os grupos possuem distribuições similares \cite{Chen2015}. 
@@ -227,9 +226,9 @@ O gSeg segue o viés de detecção de um ponto de mudança, mas de acordo com \c
 
 \subsubsection{PELT}
 
-O \textit{Pruned Exact Linear Time} (PELT) descrito no \autoref{alg:pelt} foi proposto por \cite{Killick2012}, a sua base de desenvolvimento está no algoritmo \textit{Optimal Partitioning} (OP) descrito por \cite{Gioumousis2005} de forma a melhorar o desempenho obtido por seu antecessor. 
+O \textit{Pruned Exact Linear Time} (PELT) foi proposto por \cite{Killick2012}, a sua base de desenvolvimento está no algoritmo \textit{Optimal Partitioning} (OP) descrito por \cite{Gioumousis2005} de forma a melhorar o desempenho obtido por seu antecessor.
 
-Em \autoref{alg:op} podemos ver um pseudocodigo que representa o algoritmo OP. A principal diferença entre os dois algoritmos citados acima é a redução de visualização de \textit{change points} anteriores ao calculado encontrado na proposta do método PELT onde somente alguns pontos de mudança são percorridos \cite{BenedicteBakka2018}.
+A principal diferença entre os dois algoritmos citados acima é a redução de visualização de \textit{change points} anteriores ao calculado encontrado na proposta do método PELT onde somente alguns pontos de mudança são percorridos \cite{BenedicteBakka2018}.
 
 A diferença entre as descrições dos algoritmos propostos pode ser vista a partir da segunda linha de do laço de repetição for, apresentando uma interação diferente se comparar o mesmo ponto em ambos algoritmos. Essa diferença se da por causa da proposta de do método PELT, visando aumentar a eficiência computacional, fazendo com que valores inválidos sejam excluídos em uma minimização \cite{Killick2012}. 
 
@@ -243,9 +242,9 @@ Ao realizar a minimização, assumimos que existe uma constante $K$ tal que, par
 
 \subsubsection{SpecDetec}
 
-O algoritmo de espectro de grafos (\textit{Graph Spectrum}) proposto por \cite{Uzai2019} é uma adaptação do gSEG, onde apresenta como atividade principal a análise de valores estatísticos de varreduras com grafos, agrupando dados que estão conectados. 
+O algoritmo de espectro de grafos (\textit{Graph Spectrum}) proposto por \cite{Uzai2019} é uma adaptação do gSEG, onde apresenta como atividade principal a análise de valores estatísticos de varreduras com grafos, agrupando dados que estão conectados.
 
-O espectro de grafos é a representação dos autovalores, ou seja, valores contidos na diagonal de uma matriz de um grafo determinado $G$, esses autovalores podem ser vistos na matriz de adjacência calculada a partir do grafo, de tal forma que $A(G)$ \cite{Uzai2019}. 
+O espectro de grafos é a representação dos autovalores, ou seja, valores contidos na diagonal de uma matriz de um grafo determinado $G$, esses autovalores podem ser vistos na matriz de adjacência calculada a partir do grafo, de tal forma que $A(G)$ \cite{Uzai2019}.
 
 O funcionamento do algoritmo é determinado pelos passos de determinação de uma matriz de similaridade entre pontos $x$ e $y$, assim obtendo $S_{ij} = (x_{i}, y_{j})$.A partir do calculo da matriz $S$ com a medida de similaridade Gaussiana é obtido uma matriz de afinidade, usada para o repartimento entre si obtendo \textit{clusters}, assim podendo ser identificados os pontos de mudança \cite{Uzai2019}.
 
@@ -253,11 +252,11 @@ A análise de resultados em comparação com algoritmos que possuem o mesmo obje
 
 \subsubsection{TSMCP}
 
-O algoritmo TSMCP, abreviação de \textit{Fast Two Stage Multiple Change Point Detection}, baseado no laço adaptativo proposto por \cite{Zou2006}, onde utiliza-se pesos adaptativo para penalizar os coeficientes a fim de selecionar as variáveis. O método proposto contém estágios de corte e refinamento para estimar simultaneamente múltiplos pontos de mudança em modelos lineares \cite{Jin2016}. 
+O algoritmo TSMCP, abreviação de \textit{Fast Two Stage Multiple Change Point Detection}, baseado no laço adaptativo proposto por \cite{Zou2006}, onde utiliza-se pesos adaptativo para penalizar os coeficientes a fim de selecionar as variáveis. O método proposto contém estágios de corte e refinamento para estimar simultaneamente múltiplos pontos de mudança em modelos lineares \cite{Jin2016}.
 
-O procedimento da composição das etapas de estimação dos números de pontos de mudanças e suas respectivas localizações, essa técnica apresentou um maior desempenho em coleções de dados menores, pela quantidade de repetições a ser realizada na etapa de corte \cite{Jin2016}. 
+O procedimento da composição das etapas de estimação dos números de pontos de mudanças e suas respectivas localizações, essa técnica apresentou um maior desempenho em coleções de dados menores, pela quantidade de repetições a ser realizada na etapa de corte \cite{Jin2016}.
 
-A fase de corte, é onde será sequenciado o conjunto de dados e a partir dele é suposto a existência de um ponto de mudança nesse segmento, como o modelo visto utiliza de regressão linear, é feita uma regularização de com os mínimos quadrados para obter estimadores iniciais, utilizados para determinação dos pontos de mudança \cite{Jin2016}. 
+A fase de corte, é onde será sequenciado o conjunto de dados e a partir dele é suposto a existência de um ponto de mudança nesse segmento, como o modelo visto utiliza de regressão linear, é feita uma regularização de com os mínimos quadrados para obter estimadores iniciais, utilizados para determinação dos pontos de mudança \cite{Jin2016}.
 
 A fase de refino é responsável pela verificação da existência de alguma variação dentro das áreas obtidas na fase de corte, para alcançar esse objetivo é aplicado um teste de razão de quase verossimilhança em cada segmento gerado afim de estimativas de pontos de mudanças \cite{Jin2016}.
 
