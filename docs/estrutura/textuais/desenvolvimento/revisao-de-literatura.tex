@@ -199,11 +199,19 @@ A aplicação desses modelos de ponto de mudança é apresentada por diversos au
 
 \subsection{Algoritmos Relacionados}
 
-Nesta seção será apresentado algoritmos desenvolvidos com o proposito de segmentar \textit{datasets} e determinar pontos de mudanças caso haja. Os algoritmos apresentados possuem características de determinação de \textit{change point} divergentes, ou seja, cada um deles possuem uma abordagem propria para a segmentação dos dados \cite{Aminikhanghahi2017}. A seguir encontra-se a definição de algumas ferramentas disponíveis para utilização gratuita (\textit{open source}):
+Nesta seção será apresentado algoritmos desenvolvidos com o proposito de segmentar \textit{datasets} e determinar pontos de mudanças caso haja. Os algoritmos apresentados possuem características de determinação de \textit{change point} divergentes, ou seja, cada um deles possuem uma abordagem própria para a segmentação dos dados \cite{Aminikhanghahi2017}. A seguir encontra-se a definição de algumas ferramentas disponíveis para utilização gratuita (\textit{open source}):
 
 \subsubsection{CBS}
 
-Circular Binary Segmentation
+O CBS (Circular Binary Segmentation) é uma modificação de uma estratégia de segmentação binária, proposta com a finalidade de segmentar o cromossomo, apresentando funcionalidades adicionais para normalizar os dados. A segmentação binária é uma técnica aplicada para a determinar a localização de um ponto de mudanças com a aplicação de testes recursivos \cite{Olshen2004}.
+
+Um dos objetivo na proposta do CBS foi a identificação de segmentos menores dentro de segmento maiores de mudanças. Devido a níveis de significância pequenos aplicados aos cálculos uma grande quantidade de permutações é realizada na determinação de somente um ponto de mudança, chegando a ordem de dez mil, esse processo é feito para cada segmento existente na coleção de dados \cite{Olshen2004}.
+
+Devido ao custo computacional do cálculo em dados grande ser alto em sua época de desenvolvimento, os dados são repartidos em janelas sobrepostas com tamanhos aproximadamente iguais, para alcançar uma maior performance ao procurar ponto de mudanças \cite{Olshen2004}.
+
+O CBS mostrou ter um desempenho consistente, diante de comparações com técnicas semelhantes, onde se destacou por sua pela sensibilidade na detecção e a taxa de falsos negativos \cite{Hsu2011}.
+
+% \subsubsection{ecp}
 
 \subsubsection{gSeg}
 
@@ -224,7 +232,7 @@ O \textit{Pruned Exact Linear Time} (PELT) descrito no \autoref{alg:pelt} foi pr
 Em \autoref{alg:op} podemos ver um pseudocodigo que representa o algoritmo OP. A principal diferença entre os dois algoritmos citados acima é a redução de visualização de \textit{change points} anteriores ao calculado encontrado na proposta do método PELT onde somente alguns pontos de mudança são percorridos \cite{BenedicteBakka2018}. 
 
 \input{./dados/algoritmos/OP} 
-\input{./dados/algoritmos/PELT} 
+\input{./dados/algoritmos/PELT}
 
 A diferença entre as descrições dos algoritmos propostos pode ser vista a partir da segunda linha de do laço de repetição for, apresentando uma interação diferente se comparar o mesmo ponto em ambos algoritmos. Essa diferença se da por causa da proposta de do método PELT, visando aumentar a eficiência computacional, fazendo com que valores inválidos sejam excluídos em uma minimização \cite{Killick2012}. 
 
