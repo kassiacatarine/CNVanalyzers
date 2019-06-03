@@ -57,30 +57,30 @@ O início da análise computacional dos dados de sequenciamento foi abordado por
 \label{sec:copyNumberVariation}
 
 % Introdução ao assunto do CNV 
-A \textit{copy number variation} (CNV) ou no português variação no número de cópias, são alterações que ocorrem na região genômica, elas se classificam como inserções, duplicações e deleções na estrutura do cromossomo, como representado na \autoref{fig:figura-copy-number-variation} \cite{Zhao2013,Redon2006}. Essas variações podem ser encontradas em todos os seres humanos, podendo não representar nenhuma alteração ou ser responsável por doenças de origem mendeliana, sua existência e descoberta são essenciais para o entendimento da composição genômica \cite{Redon2006,Feuk2006}.
+A \textit{copy number variation} (CNV) ou no português, variação no número de cópias, são alterações que ocorrem na região genômica, elas se classificam como inserções, duplicações e deleções na estrutura do cromossomo, como representado na \autoref{fig:figura-copy-number-variation} \cite{Zhao2013,Redon2006}. Essas variações podem ser encontradas em todos os seres humanos, podendo não representar nenhuma alteração ou ser responsável por doenças de origem mendeliana, sua existência e descoberta são essenciais para o entendimento da composição genômica \cite{Redon2006,Feuk2006}.
 
 % Definição de CNV com imagem
 \begin{figure}[!htb]
     \centering
-    \caption{Exemplo de variação no número de cópias (CNV) no cromossomo}
+    \caption{Exemplo de variações no número de cópias (CNVs) no cromossomo}
     \includegraphics[width=1\textwidth]{./dados/figuras/copy-number-variation}
     \fonte{Adaptado de \cite{Dierssen2009}}
     \label{fig:figura-copy-number-variation}
 \end{figure}
 
 % Contexto 
-Com o estudo do genoma humano \cite{Lander2001} houve a possibilidade de descobertas relevantes sobre doenças ao comparar a composição do DNA de várias pessoas, entretanto inicialmente essas descobertas se deu no nível macro, como em números de cromossomos. Portanto, a maior parte das doenças encontradas estavam relacionadas a análise do genoma completo, onde podiam ser vistos a partir de um microscópio \cite{Feuk2006}. 
+Com o estudo do genoma humano \cite{Lander2001} houve a possibilidade de descobertas relevantes sobre doenças ao comparar a composição do DNA de várias pessoas, entretanto, inicialmente essas descobertas se deu no nível macro, como em números de cromossomos. Portanto, a maior parte das doenças encontradas estavam relacionadas a análise do genoma completo, onde podiam ser vistos a partir de um microscópio \cite{Feuk2006}.
 
-As tecnologias de sequenciamento do DNA possibilitou a investigação das micropartículas que concebiam o genoma, a partir dela foi possível identificar a existência de pequenas inserções, deleções e duplicações não identificadas a partir de análises microscópica. De acordo com o estudo dessas variações no número de cópias da estrutura genômica foram vistos uma série de casos onde não representava nenhuma consequência e outros que possuíam uma grande chance de causar doenças de origem mendelianas \cite{Feuk2006,Xi2011}. 
+As tecnologias de sequenciamento do DNA possibilitou a investigação das micropartículas que concebiam o genoma, a partir dela foi possível identificar a existência de pequenas inserções, deleções e duplicações não identificadas a partir de análises microscópicas. De acordo com o estudo dessas variações no número de cópias da estrutura genômica, foram vistos uma série de casos onde não representava nenhuma consequência e outros que possuíam uma grande chance de causar doenças de origem mendelianas \cite{Feuk2006,Xi2011}.
 
 % Sobre o estudo 
-O estudo do CNV foi pouco aprofundado até recentemente em comparação com outras classes da variação genética \cite{Redon2006}, mas com o avanço do NGS e o auto rendimento produzido pelos sequenciamentos utilizados, houve um aumento no grau de avaliabilidade dos mesmos, sendo possível o reconhecimento das regiões afetadas, assim mudando essa realidade \cite{Mills2011,Feuk2006}.
+O estudo do CNV foi pouco aprofundado até recentemente em comparação com outras classes da variação genética \cite{Redon2006}, mas com o avanço do NGS e o auto rendimento produzido pelos sequenciamentos utilizados, houve um aumento no grau de avaliabilidade dos mesmos, sendo possível o reconhecimento das regiões afetadas pelas CNVs, assim mudando essa realidade \cite{Mills2011,Feuk2006}.
 
-As distribuições de variações do número de cópias se distinguem entre populações, elas são formadas por mutação, seleção e histórico demográfico, onde indivíduos que se encontram expostos a determinadas características, como por exemplo demográfica, apresentam variações semelhantes, assim sendo possível a identificação e classificação entre tipos de populações existentes \cite{Redon2006}. 
+As distribuições de variações do número de cópias se distinguem entre populações, elas são formadas por mutação, seleção e histórico demográfico, onde indivíduos que se encontram expostos a determinadas características como, por exemplo, demográfica, apresentam variações semelhantes, assim sendo possível a identificação e classificação entre categorias de populações existentes \cite{Redon2006}.
 
-Em \cite{Snijders2001} é feita uma montagem de dados genômicos, a fim de mostrar as variações existentes e as suas medições precisas em um array CGH de uma amostra sequenciada pelo \textit{Coriell Institute for Medical Research}. Os dados dessa amostra, serão denominados como Coriell neste trabalho pela ligação com o instituto pesquisado, ela é utilizada em pesquisas por oferecer medições confiáveis das variações ocorridas. 
+Em \cite{Snijders2001} é feita uma montagem de dados genômicos, de modo a mostrar as variações existentes e as medições precisas da amostra sequenciada pelo \textit{Coriell Institute for Medical Research}. Os dados dessa amostra, serão denominados como Coriell neste trabalho pela ligação com o instituto pesquisado, ela é utilizada em pesquisas por oferecer medições confiáveis das variações ocorridas.
 
-As alterações nos números de cópias apresentadas em Coriell, atende a várias origens, inclusive a variações recorrentes a câncer. Os microarrays montados graficamente a partir dos dados sequenciados é a relação de razão logarítmica média $_2$ (razão de $log_{2}$) pela posição ou pelo cromossomo, como apresentado na \autoref{fig:coriell-cnv}.
+As alterações nos números de cópias apresentadas em Coriell, atende a várias origens, inclusive as variações recorrentes a câncer. As informações sequenciadas são dispostas em microarrays, elas podem ser montadas graficamente sendo formando uma relação de razão logarítmica média $_2$ (razão de $log_{2}$) pela posição ou pelo cromossomo, como apresentado na \autoref{fig:coriell-cnv}.
 
 \begin{figure}[!htb]
     \centering
@@ -90,13 +90,13 @@ As alterações nos números de cópias apresentadas em Coriell, atende a vária
     \label{fig:coriell-cnv}
 \end{figure}
 
-Uma linhagem celular GM03576, pertencente ao conjunto de dados do Coriell, demonstra a identificação de CNVs de acordo com a representação gráfica. A \autoref{fig:coriell-cnv}-a denota o ganho de números de cópias do cromossomo 2 e 21, onde é possível ver um aumento na média da razão de $log_{2}$. A \autoref{fig:coriell-cnv}-b destaca a deleção de números de cópias de acordo com o cromossomo 9 da linhagem celular apresentada, onde contém setas de identificação. 
+A linhagem celular GM03576, pertencente ao conjunto de dados do Coriell, demonstra a identificação de CNVs de acordo com a representação gráfica. A \autoref{fig:coriell-cnv}-a denota o ganho de números de cópias do cromossomo 2 e 21, onde é possível ver um aumento na média da razão de $log_{2}$. A \autoref{fig:coriell-cnv}-b destaca a deleção de números de cópias de acordo com o cromossomo 9 da linhagem celular apresentada, onde contém setas de identificação.
 
 O \cite{Snijders2001}, apresenta uma confirmação dos ganhos e perdas relatados acima, na \autoref{fig:coriell-cnv}-c, destacando os ganhos como pontos na cor verde e a perda como pontos na cor vermelha.
 
 \subsection{Métodos de Detecção} 
 
-A fim de estudar e descobrir as principais características acerca das regiões do genoma, sendo elas a codificante e a não codificante, a investigação da detecção das variações no número de cópias é essencial para o processo de descoberta de peculiaridades relacionadas a amostra. Para alcançar esse objetivo, \cite{Zhao2013} descreve existe cinco estratégias diferentes a serem aplicadas na detecção, sendo elas as detalhadas na \autoref{fig:estrategias-deteccao-cnv}.
+De modo a estudar e descobrir as principais características acerca das regiões do genoma, sendo elas a codificante e a não codificante, a investigação da detecção das variações no número de cópias é essencial para o processo de descoberta de peculiaridades relacionadas a amostras. Para alcançar esse objetivo, \cite{Zhao2013} descreve existe cinco estratégias diferentes a serem aplicadas na detecção, sendo elas as detalhadas na \autoref{fig:estrategias-deteccao-cnv}.
 
 \begin{figure}[!htb]
     \centering
@@ -106,25 +106,24 @@ A fim de estudar e descobrir as principais características acerca das regiões 
     \label{fig:estrategias-deteccao-cnv}
 \end{figure}
 
-As abordagens da \autoref{fig:estrategias-deteccao-cnv} apresenta vantagens e limitações de acordo com o cenário a ser aplicado, sendo algumas das vantagens como no MEP em utilizações em leituras de final emparelhadas, ou em ferramentas que utilizam a abordagem LD, onde apresenta um maior desempenho em leituras curtas, mas independente disso, nenhuma das cinco abordagens é capaz de detectar todas as CNVs existentes \cite{Zhao2013}. 
+As abordagens da \autoref{fig:estrategias-deteccao-cnv} apresenta vantagens e limitações de acordo com o cenário a ser aplicado. Varias vantagens foram registradas, como no MEP em utilizações em leituras de final emparelhadas, ou em ferramentas que utilizam a abordagem LD, onde apresenta mais desempenho em leituras curtas, mas independente disso, nenhuma das cinco abordagens conseguiram detectar todas as CNVs existentes \cite{Zhao2013}.
 
-O desenvolvimento de aplicações ligadas a essas estratégias se dá em linguagens de programação como R, C/C++, Java e outras. Apresentando diferentes abordagens para que a \textit{copy number variation} seja identificada e exposta, tentando alcançar uma maior performance \cite{Zhao2013}.
+O desenvolvimento de aplicações ligadas a essas estratégias se dá em linguagens de programação como R, C/C++, Java e outras. Apresentando diferentes abordagens para que a \textit{copy number variation} seja identificada e exposta, tentando alcançar uma maior desempenho \cite{Zhao2013}.
 
 \subsection{Métodos Avaliados} 
 
-Nesta seção será apresentado a descrição alguns métodos focados na análise de \textit{copy number variation} que utilizam a estratégia de detecção baseada em profundidade em leitura (PL), ou seja, aplicações implementado modelos estatísticos focados em encontrar pontos de mudanças em uma série temporal, para alcançar o objetivo de encontrar a variação em dados do cromossomo \cite{Zhao2013}. A maioria das ferramentas descritas a seguir possuem natureza \textit{opensource}, assim sendo possível a contribuição da comunidade para o seu crescimento, com essa característica em mente, a evolução do mesmo pode ocorrer apos a publicação deste estudo, alterando a versão listada na \autoref{qua:ferramentas-de-deteccao-de-cnv}.
-
+Nesta subseção será apresentado a descrição alguns métodos focados na análise de \textit{copy number variation} que utilizam a estratégia de detecção baseada em profundidade em leitura (PL), ou seja, aplicações que implementam modelos estatísticos focados em encontrar pontos de mudanças em uma série temporal, para alcançar o objetivo de encontrar a variação em dados do cromossomo \cite{Zhao2013}. A maioria das ferramentas descritas a seguir possuem natureza \textit{opensource} (Código livre), assim sendo possível obter e contribuir com o código para o seu crescimento, com essa característica em mente, a evolução do mesmo pode ocorrer apos a publicação deste estudo, alterando a versão listada na \autoref{qua:ferramentas-de-deteccao-de-cnv}.
 
 % Detecção
-A detecção de CNVs passou por tecnologias como cariotipagem e hibridização fluorescente in situ (FISH) no início de pesquisas relacionadas ao tema, apos a descoberta da estrutura genômica completa, a detecção se deu por meio de hibridização genômica comparativa baseada em array (aCGH). O NGS possibilitou a melhoria na leitura de variações no número de cópias, obtendo uma maior performance ao ler os identificar as regiões variantes \cite{Zhao2013}. 
+A detecção de CNVs passou por tecnologias como cariotipagem e hibridização fluorescente in situ (FISH) no início de pesquisas relacionadas ao tema, apos a descoberta da estrutura genômica completa, a detecção se deu através de hibridização genômica comparativa baseada em array (aCGH). O NGS possibilitou a melhoria na leitura de variações no número de cópias, obtendo uma maior desempenho ao ler os identificar as regiões variantes graças as novas técnicas de sequenciamento \cite{Zhao2013}. 
 
 O método de identificação de CNV aplicado a dados gerados com ferramentas do NGS baseado em PL é utilizado para estimar o número de cópias, determinando sua localidade de acordo com as posições existente do cromossomo de amostra. A descoberta de CNVs segue quatro passos ao utilizar essa abordagem: mapeamento, normalização, estimativa do número de cópias e segmentação \cite{Zhao2013}.
 
-A estimação do número de cópias pode ser resolvida de forma a aplicar algoritmos nos dados da amostra, como pode ser visto em algumas ferramentas existentes de detecção de CNV presentes no \autoref{qua:ferramentas-de-deteccao-de-cnv}. Esses modelos assumem a existência de perdas ou ganhos ao longo do cromossomo, aplicando algoritmos de distribuição de probabilidade na média e ou variância, a fim de detectar a localização de alguma variação no número de cópias \cite{Zhao2013}.
+A estimação do número de cópias pode ser resolvida de forma a aplicar algoritmos nos dados da amostra, como pode ser visto em algumas ferramentas existentes de detecção de CNVs presentes no \autoref{qua:ferramentas-de-deteccao-de-cnv}. Esses modelos assumem a existência de perdas ou ganhos ao longo do cromossomo, aplicando algoritmos de distribuição de probabilidade na média e/ou variância, de modo a detectar a localização de alguma variação no número de cópias \cite{Zhao2013}.
 
 \input{dados/quadros/ferramentas-de-deteccao-de-cnv.tex}
 
-Os projetos apresentados no \autoref{qua:ferramentas-de-deteccao-de-cnv} possui suas peculiaridades de acordo com o método utilizado para identificação de CNVs, sendo alguns deles adaptados especificamente para a sua análise, como nos algoritmos implementados no DNAcopy, fastseg, CGHSeg, ExomeDepth. O iSeg é o único listado que se difere das ferramentas citadas acima, oferecendo uma análise genômica que abrange variação do número de cópias de DNA, ocupação do nucleossomo, sensibilidade à nuclease e dados de sensibilidade diferencial à nuclease \cite{Girimurugan2018}. 
+Os projetos apresentados no \autoref{qua:ferramentas-de-deteccao-de-cnv} possui suas peculiaridades de acordo com o método utilizado para identificação de CNVs, sendo alguns deles adaptados especificamente para a sua análise, como nos algoritmos implementados no DNAcopy, fastseg, CGHSeg, ExomeDepth. O iSeg é o único listado que se difere das ferramentas citadas acima, oferecendo uma análise genômica que abrange variação do número de cópias do DNA, ocupação do nucleossomo, sensibilidade à nuclease e dados de sensibilidade diferencial à nuclease \cite{Girimurugan2018}.
 
 \section{CHANGE POINT DETECTION}
 \label{sec:changePointDetection}
