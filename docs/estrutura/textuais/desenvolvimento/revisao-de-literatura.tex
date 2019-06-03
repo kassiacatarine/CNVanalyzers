@@ -129,7 +129,7 @@ Os projetos apresentados no \autoref{qua:ferramentas-de-deteccao-de-cnv} possui 
 \label{sec:changePointDetection}
 
 % Introdução ao assunto CPD 
-O estudo de dados coletados e distribuídos ao longo de um determinado tempo, também denominado como um série temporal (\textit{Time Serie}/TS), é uma ferramenta muito utilizada para a observação, previsão e aprendizado de padrões em diversas áreas da ciência. Um problema recorrente ao analisar TS é a identificação de um ponto de variação que não era esperado no decorrer dos dados transcritos no gráfico, esse efeito é denominado como \textit{Change Point Detection} (Detecção de Ponto de Mudança/CPD) \cite{Aminikhanghahi2017}.
+O estudo de dados coletados e distribuídos ao longo de um determinado tempo, também denominado como série temporal (\textit{Time Serie}/TS), é uma área muito utilizada para a observação, previsão e aprendizado de padrões em diversos ramos da ciência. Um problema recorrente ao analisar TS é a identificação de um ponto de variação que não era esperado no decorrer dos dados transcritos no gráfico, essa atividade é denominado como \textit{Change Point Detection} (Detecção de Ponto de Mudança/CPD) \cite{Aminikhanghahi2017}.
 
 \begin{figure}[!htb]
     \centering
@@ -140,11 +140,9 @@ O estudo de dados coletados e distribuídos ao longo de um determinado tempo, ta
 \end{figure}
 
 % Imagem e explicação de CPD de acordo com ela 
-Ao observar a \autoref{fig:change-point}, é possível perceber que os elementos da série não permanecem em um único formato, variando em alguns pontos quando há alguma interferência no comportamento do componente percebido. A identificação das setas em vermelho exibe os pontos de mudança e as linhas horizontais na cor rosa são caracterizadas pelos estados normais da série temporal. A observação de pontos de mudanças em uma coleção de dados (\textit{dataset}) com muitos variantes, muitas vezes necessita da utilização de algoritmos, a fim de obter uma maior precisão na detecção. 
+Ao observar a \autoref{fig:change-point}, é possível perceber que os elementos da série não permanecem em um único formato, variando em alguns pontos quando há alguma interferência no comportamento do componente percebido. A identificação das setas em vermelho exibe os pontos de mudança e as linhas horizontais na cor rosa são caracterizadas pelos estados normais da série temporal. A observação de pontos de mudanças em uma coleção de dados (\textit{dataset}) com muitos variantes, muitas vezes necessita da utilização de algoritmos, de modo a obter uma maior precisão em sua detecção.
 
-A aplicação de desse conceito tem sido bastante explorada em vários cenários na atualidade, como em análises de imagem, reconhecimento de padrões, biomédico \cite{Fan2015}, \textit{cybersecurity} \cite{Polunchenko2012}, séries climáticas \cite{Bates2012}, entre outros. 
-
-Os objetivos fixados ao estudar pontos de mudança geralmente estão entre saber se existe alguma variação, e se existir saber se é mais de uma e quais os seus respectivos locais em um determinado tempo \cite{Chen1-2000}.
+A aplicação desse conceito tem sido bastante explorada em vários cenários na atualidade, como em análises de imagem, reconhecimento de padrões, biomédico \cite{Fan2015}, \textit{cybersecurity} \cite{Polunchenko2012}, séries climáticas \cite{Bates2012}, entre outros. Os objetivos fixados ao estudar pontos de mudança geralmente estão entre saber se existe alguma variação, e se existir identificar se é mais de uma e quais os seus respectivos locais em um determinado tempo \cite{Chen1-2000}.
 
 \subsection{Formulação do Problema}
 
@@ -177,15 +175,15 @@ versus a alternativa
     \label{eq:cpd-hipotese-alternativa-2}
 \end{equation}
 
-onde $q$ e $k_1, k_2, ..., k_q$ precisam ser estimados. Essas hipóteses combinadas revelam aspectos da inferência de ponto de mudança, ou seja, os objetivos citados acima. 
+onde $q$ e $k_1, k_2, ..., k_q$ precisam ser estimados. Essas hipóteses combinadas revelam aspectos da inferência de ponto de mudança, ou seja, os objetivos citados acima.
 
-As hipóteses apresentadas se adéquam a problemas relacionado a busca de um simples ponto de mudança, entretanto ela pode ser adaptada para aderirem problemas de múltiplos pontos de mudança em uma coleção de dados \cite{Chen1-2000}.
+As hipóteses apresentadas se adéquam a problemas relacionados a busca de um simples ponto de mudança, entretanto, ela pode ser adaptada para aderirem problemas de múltiplos pontos de mudança em uma coleção de dados \cite{Chen1-2000}.
 
 \subsection{Tipos de Pontos de Mudança}
 
-Os pontos de mudança podem ser observados a partir de uma representação gráfica das distribuições dos valores de uma coleção. Contudo, as mudanças ocorridas podem ser classificadas de acordo com o tipo de mudança, seja ela, mudança na média, na variância, em ambos simultaneamente, além de vários tipos de modelos propostos ao longo do tempo \cite{Chen2-2000}. 
+Os pontos de mudança podem ser observados a partir de uma representação gráfica das distribuições dos valores de uma coleção. Contudo, as mudanças ocorridas podem ser classificadas de acordo com a forma da mudança, seja ela, mudança na média, na variância, em ambos simultaneamente, além de várias categorias de modelos propostos ao longo do tempo \cite{Chen2-2000}.
 
-A aplicação desses modelos de ponto de mudança é apresentada por diversos autores, assim como em \cite{Cheon2010} ao apresentar um a utilização da detecção por média em um modelo Bayesian e no \cite{Shi2017} ao descrever a utilização de um modelo baseado em grafos para análise de modelos de grande dimensão.
+A aplicação desses modelos de ponto de mudança é apresentada por diversos autores, assim como em \cite{Cheon2010} ao apresentar uma utilização da detecção por média em um modelo Bayesian e em \cite{Shi2017} ao descrever a utilização de um modelo baseado em grafos para análise de modelos de grande dimensão.
 
 
 % A detecção de pontos de mudança pode ser classificada de duas formas, Online e Offline, onde a forma online é um processamento de dados ao vivo, tentando detectar o ponto antes que ocorra realmente. O método de detecção offline possui uma maior flexibilidade em relação ao online, sendo capaz de analisar toda a série disponível para realizar as identificadões necessárias \cite{Aminikhanghahi2017}.
@@ -197,15 +195,15 @@ A aplicação desses modelos de ponto de mudança é apresentada por diversos au
 
 \subsection{Algoritmos Relacionados}
 
-Nesta seção será apresentado algoritmos desenvolvidos com o proposito de segmentar \textit{datasets} e determinar pontos de mudanças caso haja. Os algoritmos apresentados possuem características de determinação de \textit{change point} divergentes, ou seja, cada um deles possuem uma abordagem própria para a segmentação dos dados \cite{Aminikhanghahi2017}. A seguir encontra-se a definição de algumas ferramentas disponíveis para utilização gratuita (\textit{open source}):
+Nesta subseção será apresentado algoritmos desenvolvidos com o proposito de segmentar \textit{datasets} e determinar pontos de mudanças caso haja. Os algoritmos apresentados possuem características de determinação de \textit{change point} divergentes, ou seja, cada um deles possuem uma abordagem própria para a segmentação dos dados \cite{Aminikhanghahi2017}. A seguir encontra-se a definição de algumas ferramentas disponíveis para utilização e contribuição, distribuídas de forma (\textit{open source}):
 
 \subsubsection{CBS}
 
 O CBS (\textit{Circular Binary Segmentation}) é uma modificação de uma estratégia de segmentação binária, proposta com a finalidade de segmentar o cromossomo, apresentando funcionalidades adicionais para normalizar os dados. A segmentação binária é uma técnica aplicada para a determinar a localização de um ponto de mudanças com a aplicação de testes recursivos \cite{Olshen2004}.
 
-Um dos objetivo na proposta do CBS foi a identificação de segmentos menores dentro de segmento maiores de mudanças. Devido a níveis de significância pequenos aplicados aos cálculos uma grande quantidade de permutações é realizada na determinação de somente um ponto de mudança, chegando a ordem de dez mil, esse processo é feito para cada segmento existente na coleção de dados \cite{Olshen2004}.
+Um dos objetivos na proposta do CBS foi a identificação de segmentos menores dentro de segmentos maiores de mudanças. Devido a níveis de significância pequenos aplicados aos cálculos uma grande quantidade de permutações é realizada na determinação de somente um ponto de mudança, chegando a ordem de dez mil, esse processo é feito para cada segmento existente na coleção de dados \cite{Olshen2004}.
 
-Devido ao custo computacional do cálculo em dados grande ser alto em sua época de desenvolvimento, os dados são repartidos em janelas sobrepostas com tamanhos aproximadamente iguais, para alcançar uma maior performance ao procurar ponto de mudanças \cite{Olshen2004}.
+Devido ao custo computacional do cálculo em dados complexos serem alto em sua época de desenvolvimento, foi proposto a repartição dos dados em janelas sobrepostas com tamanhos aproximadamente iguais, para alcançar uma maior desempenho ao procurar ponto de mudanças \cite{Olshen2004}.
 
 O CBS mostrou ter um desempenho consistente, diante de comparações com técnicas semelhantes, onde se destacou por sua pela sensibilidade na detecção e a taxa de falsos negativos \cite{Hsu2011}.
 
@@ -213,25 +211,23 @@ O CBS mostrou ter um desempenho consistente, diante de comparações com técnic
 
 \subsubsection{gSeg}
 
-O gSeg (\textit{Graph Segmentation}) é um algoritmo baseado em grafos, para a detecção de pontos de mudanças de acordo com o agrupamento de observações próximas das distâncias representadas por grafos, onde será identificado a similaridade entre os pontos, para determinação de uma variação 
-\cite{Chen2015}. 
+O gSeg (\textit{Graph Segmentation}) é um algoritmo baseado em grafos, para a detecção de pontos de mudanças de acordo com o agrupamento de observações próximas das distâncias representadas por grafos, onde será identificado a similaridade entre os pontos, para determinação de uma variação
+\cite{Chen2015}.
 
-A sua execução é dada pela divisão de dois grupos, sendo eles o grupo que vem antes de $\tau$ e o grupo que vem depois de $\tau$, onde cada grupo um número mínimo de observações correspondente a $1 < n_{0} \leq \tau \leq n_{1} < n$ em um único cenário de ponto de mudança, podendo ser adicionado restrições de acordo com o modelo analisado. A partir da divisão, é realizado um teste de grafo, a fim de verificar se os grupos possuem distribuições similares \cite{Chen2015}. 
+A sua execução é dada pela divisão de dois grupos, sendo eles o grupo que vem antes de $\tau$ e o grupo que vem depois de $\tau$, onde cada grupo um número mínimo de observações correspondente a $1 < n_{0} \leq \tau \leq n_{1} < n$ em um único cenário de ponto de mudança, podendo ser adicionado restrições de acordo com o modelo analisado. A partir da divisão, é realizado um teste de grafo, de modo a verificar se os grupos possuem distribuições similares \cite{Chen2015}.
 
-O método de detecção baseado em grafos é recomendado para testes em dimensões moderadas e altas, exigindo poucas informações acerca delas para realizar a varredura responsável pela segmentação em grafos. Testes técnicas de varredura diferentes foram testados, a fim ver o seu progresso de acordo com os dados de entrada, obtendo resultados abaixo da média em somente uma das técnicas \cite{Chen2015}. 
+O método de detecção baseado em grafos é recomendado para testes em dimensões moderadas e altas, exigindo poucas informações para realizar a varredura responsável pela segmentação em grafos. Alguns testes de técnicas de varredura diferentes foram testados, para ver o seu progresso de acordo com os dados de entrada, esses testes mostrou que o algoritmo apresentou resultados abaixo da média em somente uma das técnicas \cite{Chen2015}.
 
-O gSeg segue o viés de detecção de um ponto de mudança, mas de acordo com \cite{Chen2015}, o método de segmentação por grafos pode ser aplicado recursivamente ao procedimento do \textit{Circular Binary Segmentation}, se haver a necessidade de aplica-lo em cenários que apresenta mais de um ponto de mudança.
+O gSeg segue o viés de detecção de somente um ponto de mudança por vez, mas de acordo com \cite{Chen2015}, o método de segmentação por grafos pode ser aplicado recursivamente ao procedimento do \textit{Circular Binary Segmentation}, se haver a necessidade de aplica-lo em cenários que apresenta mais de um ponto de mudança.
 
 
 \subsubsection{PELT}
 
-O \textit{Pruned Exact Linear Time} (PELT) foi proposto por \cite{Killick2012}, a sua base de desenvolvimento está no algoritmo \textit{Optimal Partitioning} (OP) descrito por \cite{Gioumousis2005} de forma a melhorar o desempenho obtido por seu antecessor.
+O \textit{Pruned Exact Linear Time} (PELT) foi proposto por \cite{Killick2012}, ele se baseia no algoritmo \textit{Optimal Partitioning} (OP) descrito por \cite{Gioumousis2005} de forma a melhorar o desempenho obtido por seu antecessor.
 
-A principal diferença entre os dois algoritmos citados acima é a redução de visualização de \textit{change points} anteriores ao calculado encontrado na proposta do método PELT onde somente alguns pontos de mudança são percorridos \cite{BenedicteBakka2018}.
+A principal diferença entre os dois algoritmos citados acima é a redução de visualização de \textit{change points} anteriores ao calculado encontrado na proposta do método PELT onde somente alguns pontos de mudança são percorridos \cite{BenedicteBakka2018}. Essa diferença se da por causa da proposta do método PELT de aumentar a eficiência computacional, fazendo com que valores inválidos sejam excluídos em uma minimização, antes de considerar os possíveis pontos de mudanças \cite{Killick2012}.
 
-A diferença entre as descrições dos algoritmos propostos pode ser vista a partir da segunda linha de do laço de repetição for, apresentando uma interação diferente se comparar o mesmo ponto em ambos algoritmos. Essa diferença se da por causa da proposta de do método PELT, visando aumentar a eficiência computacional, fazendo com que valores inválidos sejam excluídos em uma minimização \cite{Killick2012}. 
-
-Ao realizar a minimização, assumimos que existe uma constante $K$ tal que, para todo $t < s < T$, onde t nunca poderá ser o melhor ponto de mudança antes de T. 
+Ao realizar a minimização, assumimos que existe uma constante $K$ tal que, para todo $t < s < T$, onde t nunca poderá ser o melhor ponto de mudança antes de T.
 
 \begin{equation}
     C\left ( y\left ( t+1 \right ):s \right ) + C\left ( y\left ( t+1 \right ):T \right ) + K \leq C\left ( y\left ( t+1 \right ):T \right )
@@ -241,23 +237,21 @@ Ao realizar a minimização, assumimos que existe uma constante $K$ tal que, par
 
 \subsubsection{SpecDetec}
 
-O algoritmo de espectro de grafos (\textit{Graph Spectrum}) proposto por \cite{Uzai2019} é uma adaptação do gSEG, onde apresenta como atividade principal a análise de valores estatísticos de varreduras com grafos, agrupando dados que estão conectados.
+O algoritmo de espectro de grafos (\textit{Graph Spectrum}) proposto por \cite{Uzai2019} é uma adaptação do gSeg, onde apresenta como atividade principal a análise de valores estatísticos de varreduras com grafos, agrupando dados que estão conectados. O espectro de grafos é a representação dos autovalores, ou seja, valores contidos na diagonal de uma matriz de um grafo $G$, esses autovalores podem ser vistos na matriz de adjacência calculada a partir do grafo, de tal forma que $A(G)$ \cite{Uzai2019}.
 
-O espectro de grafos é a representação dos autovalores, ou seja, valores contidos na diagonal de uma matriz de um grafo determinado $G$, esses autovalores podem ser vistos na matriz de adjacência calculada a partir do grafo, de tal forma que $A(G)$ \cite{Uzai2019}.
+O funcionamento do algoritmo é determinado pelos passos de determinação de uma matriz de similaridade entre pontos $x$ e $y$, assim obtendo $S_{ij} = (x_{i}, y_{j})$. A partir do cálculo da matriz $S$ com a medida de similaridade Gaussiana é obtido uma matriz de afinidade, usada para o repartimento entre si, obtendo \textit{clusters}, assim podendo ser identificados os pontos de mudança \cite{Uzai2019}.
 
-O funcionamento do algoritmo é determinado pelos passos de determinação de uma matriz de similaridade entre pontos $x$ e $y$, assim obtendo $S_{ij} = (x_{i}, y_{j})$.A partir do calculo da matriz $S$ com a medida de similaridade Gaussiana é obtido uma matriz de afinidade, usada para o repartimento entre si obtendo \textit{clusters}, assim podendo ser identificados os pontos de mudança \cite{Uzai2019}.
-
-A análise de resultados em comparação com algoritmos que possuem o mesmo objetivo, mas com técnicas para alcança-lo diferentes entre si, alcançou valores satisfatórios ultrapassando os algoritmos SegNeigh, PELT e EDivisive. A análise de espectro de grafos obteve somente resultada abaixo dos outros métodos comparados em uma base de dados, onde os demais algoritmos obtiveram uma baixa nos seus resultados também \cite{Uzai2019}.
+A análise de resultados em comparação com algoritmos que possuem o mesmo objetivo, alcançou valores satisfatórios ultrapassando os algoritmos SegNeigh, PELT e EDivisive. Os resultados da análise da funcionalidade da aboradagem de espectro de grafos obteve somente resultada abaixo dos outros métodos comparados em uma base de dados de teste, onde os demais algoritmos também mostraram uma baixa nos seus resultados \cite{Uzai2019}.
 
 \subsubsection{TSMCP}
 
-O algoritmo TSMCP, abreviação de \textit{Fast Two Stage Multiple Change Point Detection}, baseado no laço adaptativo proposto por \cite{Zou2006}, onde utiliza-se pesos adaptativo para penalizar os coeficientes a fim de selecionar as variáveis. O método proposto contém estágios de corte e refinamento para estimar simultaneamente múltiplos pontos de mudança em modelos lineares \cite{Jin2016}.
+O algoritmo TSMCP, abreviação de \textit{Fast Two Stage Multiple Change Point Detection}, baseado no laço adaptativo proposto por \cite{Zou2006}, onde utiliza-se pesos adaptativos para penalizar os coeficientes de modo a selecionar os valores que variaram. O método proposto contém estágios de corte e refinamento para estimar simultaneamente múltiplos pontos de mudança em modelos lineares \cite{Jin2016}.
 
-O procedimento da composição das etapas de estimação dos números de pontos de mudanças e suas respectivas localizações, essa técnica apresentou um maior desempenho em coleções de dados menores, pela quantidade de repetições a ser realizada na etapa de corte \cite{Jin2016}.
+A fase de corte, é onde será sequenciado o conjunto de dados e a partir dele é suposto a existência de um ponto de mudança nesse segmento, como o modelo visto utiliza de regressão linear, é feita uma regularização com os mínimos quadrados para obter estimadores iniciais, utilizados para determinação dos pontos de mudança \cite{Jin2016}.
 
-A fase de corte, é onde será sequenciado o conjunto de dados e a partir dele é suposto a existência de um ponto de mudança nesse segmento, como o modelo visto utiliza de regressão linear, é feita uma regularização de com os mínimos quadrados para obter estimadores iniciais, utilizados para determinação dos pontos de mudança \cite{Jin2016}.
+A fase de refino é responsável pela verificação da existência de alguma variação dentro das áreas obtidas na fase de corte, para alcançar esse objetivo é aplicado um teste de razão de quase verossimilhança em cada segmento gerado, para estimar pontos de mudanças \cite{Jin2016}.
 
-A fase de refino é responsável pela verificação da existência de alguma variação dentro das áreas obtidas na fase de corte, para alcançar esse objetivo é aplicado um teste de razão de quase verossimilhança em cada segmento gerado afim de estimativas de pontos de mudanças \cite{Jin2016}.
+A composição dessas etapas tem como objetivo estimar a quantidade de pontos de mudanças e suas respectivas localizações, essa técnica apresentou mais desempenho em coleções de dados menores, pela quantidade de repetições a ser realizada na etapa de corte contida no algoritmo \cite{Jin2016}.
 
 \section{MATRIZ DE CONFUSÃO}
 \label{sec:matrizDeConfusao}
@@ -272,7 +266,7 @@ A matriz de confusão é uma forma de validar experimentos, sua utilização se 
     \label{fig:matriz-confusao}
 \end{figure}
 
-Uma matriz de confusão é composta por duas dimensões, sendo elas os valores reais e os valores previstos, onde eventualmente eles serão usados para obter uma classificação do método avaliado de acordo com o seu desempenho \cite{Deng2016}. Existe demasiados modelos para se obter os valores da performance do objeto estudado, sendo as medidas mais comuns apresentadas a segui.
+Uma matriz de confusão é composta por duas dimensões, sendo elas os valores reais e os valores previstos, onde eventualmente eles serão usados para obter uma classificação do método avaliado de acordo com o seu desempenho \cite{Deng2016}. Existe demasiados modelos para se obter os valores da performance do objeto estudado, sendo as medidas mais comuns apresentadas a segui:
 
 \begin{itemize}
    \item Acurácia (AC):
