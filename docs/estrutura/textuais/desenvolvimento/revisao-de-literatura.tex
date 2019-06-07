@@ -46,12 +46,44 @@ Apesar de o sequenciamento de Sanger suprir as expectativas em sua época de sua
 
 A partir dessa realidade surgiu vários métodos baseados no \textit{next-genaration sequencing} (NGS), esses métodos são um conjunto de planos executados em conjunto para obter uma coleção maior de dados com um custo reduzido e melhor desempenho \cite{Metzker2010,Zhao2013}, como visto nos resultados produzidos pelos sequenciadores do Solexa \cite{Bennett2004}, HiSeq 2000, SOLID e outros \cite{Edwards2011,Linnarsson2010}. Esses equipamentos estão possibilitando uma maior cobertura e resolução, assim sendo possível identificar mais variações no número de cópias do genoma sequenciado \cite{Zhao2013}.
 
-% Explicação técnica de como sequencia? 
+% Explicação técnica de como sequencia?
 
 % Introdução a análise computacional 
 O início da análise computacional dos dados de sequenciamento foi abordado por Duncan McCallum e Michael Smith \cite{McCallum1977}, ao desenvolver um dos primeiros programas direcionados a compilação e estudo das informações sequenciadas \cite{HutchisonIII2007}. Entretanto, a criação de programas computacionais não se deteve com a evolução das técnicas de sequenciamento, assim sendo estudado e desenvolvidos novas formas de observações automatizadas para acompanhar a trajetória evolutiva das ferramentas de sequenciamento do DNA.
 
 % Explicar os dados gerados Dataset e como estão disponíveis 
+
+\subsection{Sequenciamento Completo do Exoma}
+
+O sequenciamento completo do exoma (WES) é uma técnica de captura e sequenciamento aplicada para a obtenção de regiões codificantes existentes no genoma. O WES surgiu como uma ferramenta propícia para elucidação de variantes genéticos relacionados a doenças \cite{Goh2013}.
+
+O crescimento de pesquisas relacionadas ao WES tem evoluído constantemente devido ao seu desempenho e aplicação a partir da utilização das tecnologias da NGS, como visto na \autoref{fig:crescimento-wes}, onde é descrito o índice de crescimento de publicações sobre o tema entre até o ano de 2012.
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Crescimento de publicações sobre WES no PubMed}
+    \includegraphics[width=0.6\textwidth]{./dados/figuras/crescimento-wes}
+    \fonte{Adaptado de \cite{Goh2013}}
+    \label{fig:crescimento-wes}
+\end{figure}
+
+\subsubsection{Pipeline do WES}
+
+O \textit{pipeline} ou fluxo do processamento do WES segue um processo similar em vários processos de captura e plataformas da NGS, sendo ele composto de duas fases, a fase de preparação de bibliotecas de DNA genômico e hibridização para coletar as matrizes dos dados e a fase de aplicação do NGS nos dados obtidos \cite{Goh2013}.
+
+A parte de preparação do DNA genômico passa por três etapas principais, sendo elas a etapa de corte, hibridização e separação dos \textit{exóns} por meio de lavagem e eluição das partículas, como visto na \autoref{fig:pipeline-ngs-wes}.
+
+\begin{figure}[!htb]
+    \centering
+    \caption{\textit{Fluxo de processamento para o sequenciamento do exoma completo}}
+    \includegraphics[width=0.8\textwidth]{./dados/figuras/pipeline-ngs-wes}
+    \fonte{Adaptado de \cite{Goh2013}}
+    \label{fig:pipeline-ngs-wes}
+\end{figure}
+
+\subsubsection{Fluxo de Análise}
+
+
 
 \section{COPY NUMBER VARIATION} 
 \label{sec:copyNumberVariation}
@@ -115,7 +147,7 @@ O desenvolvimento de aplicações ligadas a essas estratégias se dá em linguag
 Nesta subseção será apresentado a descrição alguns métodos focados na análise de \textit{copy number variation} que utilizam a estratégia de detecção baseada em profundidade em leitura (PL), ou seja, aplicações que implementam modelos estatísticos focados em encontrar pontos de mudanças em uma série temporal, para alcançar o objetivo de encontrar a variação em dados do cromossomo \cite{Zhao2013}. A maioria das ferramentas descritas a seguir possuem natureza \textit{open source} (Código livre), assim sendo possível obter e contribuir com o código para o seu crescimento, com essa característica em mente, a evolução do mesmo pode ocorrer apos a publicação deste estudo, alterando a versão listada na \autoref{qua:ferramentas-de-deteccao-de-cnv}.
 
 % Detecção
-A detecção de CNVs passou por tecnologias como cariotipagem e hibridização fluorescente in situ (FISH) no início de pesquisas relacionadas ao tema, apos a descoberta da estrutura genômica completa, a detecção se deu através de hibridização genômica comparativa baseada em array (aCGH). O NGS possibilitou a melhoria na leitura de variações no número de cópias, obtendo uma maior desempenho ao ler os identificar as regiões variantes graças as novas técnicas de sequenciamento \cite{Zhao2013}. 
+As ferramentas de sequenciamento do genoma para detecção de CNVs passou por tecnologias como cariotipagem e hibridização fluorescente in situ (FISH) no início de pesquisas relacionadas ao tema, apos a descoberta da estrutura genômica completa, a detecção se deu através de hibridização genômica comparativa baseada em array (aCGH). O NGS possibilitou a melhoria na leitura de variações no número de cópias, obtendo uma maior desempenho ao ler os identificar as regiões variantes graças as novas técnicas de sequenciamento \cite{Zhao2013,Liu2013}.
 
 O método de identificação de CNV aplicado a dados gerados com ferramentas do NGS baseado em PL é utilizado para estimar o número de cópias, determinando sua localidade de acordo com as posições existente do cromossomo de amostra. A descoberta de CNVs segue quatro passos ao utilizar essa abordagem: mapeamento, normalização, estimativa do número de cópias e segmentação \cite{Zhao2013}.
 
