@@ -68,22 +68,37 @@ O crescimento de pesquisas relacionadas ao WES tem evoluído constantemente devi
 \end{figure}
 
 \subsubsection{Pipeline do WES}
-
 O \textit{pipeline} ou fluxo do processamento do WES segue um processo similar em vários processos de captura e plataformas da NGS, sendo ele composto de duas fases, a fase de preparação de bibliotecas de DNA genômico e hibridização para coletar as matrizes dos dados e a fase de aplicação do NGS nos dados obtidos \cite{Goh2013}.
 
-A parte de preparação do DNA genômico passa por três etapas principais, sendo elas a etapa de corte, hibridização e separação dos \textit{exóns} por meio de lavagem e eluição das partículas, como visto na \autoref{fig:pipeline-ngs-wes}.
+A parte de preparação do DNA genômico passa por três etapas principais, sendo elas a etapa de corte, hibridização e separação dos \textit{exóns} através de lavagem e eluição das partículas, como visto na \autoref{fig:pipeline-ngs-wes}.
 
 \begin{figure}[!htb]
-    \centering
-    \caption{\textit{Fluxo de processamento para o sequenciamento do exoma completo}}
-    \includegraphics[width=0.8\textwidth]{./dados/figuras/pipeline-ngs-wes}
-    \fonte{Adaptado de \cite{Goh2013}}
-    \label{fig:pipeline-ngs-wes}
+\centering
+\caption{\textit{Fluxo de processamento para o sequenciamento do exoma completo}}
+\includegraphics[width=0.3\textwidth]{./dados/figuras/pipeline-ngs-wes}
+\fonte{Adaptado de \cite{Goh2013}}
+\label{fig:pipeline-ngs-wes}
 \end{figure}
 
 \subsubsection{Fluxo de Análise}
 
+Os dados de leituras gerados com a NGS segue um fluxo de análise (\autoref{fig:fluxo-de-analise-wes}) para determinar diversas características sobre as leituras produzidas. Em cada um dos fluxos existentes apresentam ferramentas desenvolvidas para a sua anotação, sendo elas apresentando diferentes métodos e formas de analisar os dado \cite{Bao2014}.
 
+\begin{figure}[!htb]
+\centering
+\caption{\textit{Fluxo de análise dos dados gerados pelo WES}}
+\includegraphics[width=1\textwidth]{./dados/figuras/fluxo-de-analise-wes}
+\fonte{Autoria Própria}
+\label{fig:fluxo-de-analise-wes}
+\end{figure}
+
+O fluxo de análise é composto pelas etapas de controle de qualidade dos dados brutos, sendo analisado a qualidade apresentada pela leitura gerada, com a finalização desse processo dá se inicio a etapa de pré-processamento, onde serão corrigidas as bases que apresentavam baixa qualidade \cite{Bao2014}.
+
+Apos a correção feita, o próximo passo é realizar um mapeamento, para alinhar um genoma de referência no genoma sequenciado, com essa etapa é possível a visualização da diferença entre os dois genomas e essa diferença pode ser classificada como uma variação genômica \cite{Bao2014}. Por meio dessa fase também é possível a determinação gráfica dos dados ao calcular o $log_2 ratio$ do genoma do paciente em relação ao genoma de referência gerando algo parecido com a \autoref{fig:coriell-cnv}-a.
+
+Os dados obtidos com o mapeamento apresenta "duplicatas de leitura" pela correspondência em determinados lugares, sendo eles matérias de DNA verdadeiros, e para isso é necessário remover essas duplicatas, realinhar e classificar novamente a qualidade da sequência, e essas atividades são realizadas na etapa de processamento de pós-alinhamento \cite{Bao2014}.
+
+Com a realização das quatro etapas do fluxo de análise, os dados estão prontos para serem utilizados na busca de variantes na etapa de Chamada de variantes, anotação e priorização, sendo aplicados ferramentas capazes de detectar e informar possíveis alterações como, por exemplo CNVs, contidas nas informações do sequenciamento \cite{Bao2014}.
 
 \section{COPY NUMBER VARIATION} 
 \label{sec:copyNumberVariation}
