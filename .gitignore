@@ -324,3 +324,4 @@ vignettes/*.pdf
 .history
 
 # End of https://www.gitignore.io/api/r,latex,visualstudiocode
+.Rproj.user
