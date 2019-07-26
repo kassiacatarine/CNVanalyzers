@@ -72,7 +72,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Kássia Catarine** - *Initial work* - [PurpleBooth](https://github.com/kassiacatarine)
+* **Kássia Catarine** - *Initial work* - [kassiacatarine](https://github.com/kassiacatarine)
 
 See also the list of [contributors](https://github.com/kassiacatarine/CNVanalyzers/contributors) who participated in this project.
 
