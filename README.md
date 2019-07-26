@@ -54,7 +54,7 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+The development of this project follows the base of package creation, where it has the description of [workflows with devtools](https://www.rstudio.com/wp-content/uploads/2015/03/devtools-cheatsheet.pdf) of the necessary files.
 
 ## Built With
 
@@ -72,9 +72,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Kássia Catarine** - *Initial work* - [PurpleBooth](https://github.com/kassiacatarine)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/kassiacatarine/CNVanalyzers/contributors) who participated in this project.
 
 ## License
 
