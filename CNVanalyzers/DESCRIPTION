@@ -1,11 +1,13 @@
-Package: CNVanalyzers
+  Package: CNVanalyzers
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Methods for DNA copy number data analysis
 Version: 0.1.0
 Author: Kássia Catarine
 Maintainer: Kássia Catarine <kassia_catarine.15@hotmail.com>
+BugReports: https://github.com/kassiacatarine/CNVanalyzers/issues
+URL: https://github.com/kassiacatarine/CNVanalyzers/
 Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+    Use four spaces when indenting paragraphs within  the Description.
+License: GNU GPL v3
 Encoding: UTF-8
 LazyData: true
