@@ -34,7 +34,7 @@ segmentationExecution <- function(x, segmentType, verbose=1) {
   if(identical("CBS", segmentType)) {
     # if (verbose>=2) cat(paste("|---* Performing CBS Segmentation","*---|\n"));
 
-    segmentCBS(x)
+    segCBS <- segmentCBS(x, verbose)
   }
   if(identical("fastseg", segmentType)) {
     if (verbose>=2) cat(paste("|---* Performing fastseg Segmentation","*---|\n"));

@@ -2,10 +2,11 @@
 #'
 #'
 
-segmentCBS <- function(x) {
+segmentCBS <- function(x, verbose = 1) {
   # Validar os dados
-  cnas <- createCNA(x)
-  cnas
+  cnas <- createCNA(x$Coriell.0529, x$Chromosome, x$Position, data.type="logratio", sampleid="c05296")
+  segCBS <- DNAcopy::segment(cnas, verbose = 1);
+  segCBS
 }
 
 createCNA <- function(genomdat, chrom, maploc, data.type=c("logratio","binary"),
@@ -16,7 +17,7 @@ createCNA <- function(genomdat, chrom, maploc, data.type=c("logratio","binary"),
       chrom=chrom,
       maploc=maploc,
       data.type=data.type,
-      sampleid=x)
+      sampleid=sampleid)
 }
 
 # .getCBSSegments <- function(x, alpha=1e-10, undo.splits="sdundo", undo.SD=1.0,
